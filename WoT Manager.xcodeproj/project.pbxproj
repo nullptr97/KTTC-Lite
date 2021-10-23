@@ -13,6 +13,43 @@
 		F50BF9A12714B37600D399BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BF99F2714B37600D399BD /* Main.storyboard */; };
 		F50BF9A32714B37700D399BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50BF9A22714B37700D399BD /* Assets.xcassets */; };
 		F50BF9A62714B37700D399BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BF9A42714B37700D399BD /* LaunchScreen.storyboard */; };
+		F50BF9AF2714B3C600D399BD /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF9AE2714B3C600D399BD /* Main.swift */; };
+		F50BF9B22714B45F00D399BD /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF9B12714B45F00D399BD /* Auth.swift */; };
+		F5130818271837AD0032797D /* Subscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51307FE271837AD0032797D /* Subscriber.swift */; };
+		F5130819271837AD0032797D /* ThreadPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51307FF271837AD0032797D /* ThreadPool.swift */; };
+		F513081A271837AD0032797D /* Signal_Catch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130800271837AD0032797D /* Signal_Catch.swift */; };
+		F513081B271837AD0032797D /* Signal_Materialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130801271837AD0032797D /* Signal_Materialize.swift */; };
+		F513081C271837AD0032797D /* Signal_Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130802271837AD0032797D /* Signal_Reduce.swift */; };
+		F513081D271837AD0032797D /* Signal_Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130803271837AD0032797D /* Signal_Merge.swift */; };
+		F513081E271837AD0032797D /* Signal_Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130804271837AD0032797D /* Signal_Mapping.swift */; };
+		F513081F271837AD0032797D /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130805271837AD0032797D /* Lock.swift */; };
+		F5130820271837AD0032797D /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130806271837AD0032797D /* Timer.swift */; };
+		F5130821271837AD0032797D /* Signal_Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130807271837AD0032797D /* Signal_Dispatch.swift */; };
+		F5130822271837AD0032797D /* QueueLocalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130808271837AD0032797D /* QueueLocalObject.swift */; };
+		F5130823271837AD0032797D /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130809271837AD0032797D /* Disposable.swift */; };
+		F5130824271837AD0032797D /* Multicast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513080A271837AD0032797D /* Multicast.swift */; };
+		F5130825271837AD0032797D /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513080B271837AD0032797D /* Bag.swift */; };
+		F5130826271837AD0032797D /* Signal_Single.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513080C271837AD0032797D /* Signal_Single.swift */; };
+		F5130827271837AD0032797D /* Signal_Take.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513080D271837AD0032797D /* Signal_Take.swift */; };
+		F5130828271837AD0032797D /* Signal_SideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513080E271837AD0032797D /* Signal_SideEffects.swift */; };
+		F5130829271837AD0032797D /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513080F271837AD0032797D /* Promise.swift */; };
+		F513082A271837AD0032797D /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130810271837AD0032797D /* Queue.swift */; };
+		F513082B271837AD0032797D /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130811271837AD0032797D /* Atomic.swift */; };
+		F513082C271837AD0032797D /* ValuePipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130812271837AD0032797D /* ValuePipe.swift */; };
+		F513082D271837AD0032797D /* Signal_Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130813271837AD0032797D /* Signal_Loop.swift */; };
+		F513082E271837AD0032797D /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130814271837AD0032797D /* Signal.swift */; };
+		F513082F271837AD0032797D /* Signal_Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130815271837AD0032797D /* Signal_Combine.swift */; };
+		F5130830271837AD0032797D /* Signal_Timing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130816271837AD0032797D /* Signal_Timing.swift */; };
+		F5130831271837AD0032797D /* Signal_Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5130817271837AD0032797D /* Signal_Meta.swift */; };
+		F513F2CD2714BED8005CBB92 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = F513F2CC2714BED8005CBB92 /* ObjectMapper */; };
+		F513F2CF2714BF40005CBB92 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513F2CE2714BF40005CBB92 /* UserInfo.swift */; };
+		F513F2D22714C364005CBB92 /* ExpectedTanks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513F2D12714C364005CBB92 /* ExpectedTanks.swift */; };
+		F5221526271E21D7000398FA /* TankInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5221525271E21D7000398FA /* TankInfo.swift */; };
+		F522152A271ECD39000398FA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5221528271ECD39000398FA /* StartViewController.swift */; };
+		F577EBBE271F0C8A00BDF811 /* ParameterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EBBC271F0C8A00BDF811 /* ParameterCell.swift */; };
+		F577EBBF271F0C8A00BDF811 /* ParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F577EBBD271F0C8A00BDF811 /* ParameterCell.xib */; };
+		F577EBC2271F19E800BDF811 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EBC1271F19E800BDF811 /* UIKit.swift */; };
+		F5C0B32F27246E8A008885EB /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +61,44 @@
 		F50BF9A22714B37700D399BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50BF9A52714B37700D399BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50BF9A72714B37700D399BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50BF9AE2714B3C600D399BD /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		F50BF9B12714B45F00D399BD /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		F51307FE271837AD0032797D /* Subscriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriber.swift; sourceTree = "<group>"; };
+		F51307FF271837AD0032797D /* ThreadPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadPool.swift; sourceTree = "<group>"; };
+		F5130800271837AD0032797D /* Signal_Catch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Catch.swift; sourceTree = "<group>"; };
+		F5130801271837AD0032797D /* Signal_Materialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Materialize.swift; sourceTree = "<group>"; };
+		F5130802271837AD0032797D /* Signal_Reduce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Reduce.swift; sourceTree = "<group>"; };
+		F5130803271837AD0032797D /* Signal_Merge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Merge.swift; sourceTree = "<group>"; };
+		F5130804271837AD0032797D /* Signal_Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Mapping.swift; sourceTree = "<group>"; };
+		F5130805271837AD0032797D /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		F5130806271837AD0032797D /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		F5130807271837AD0032797D /* Signal_Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Dispatch.swift; sourceTree = "<group>"; };
+		F5130808271837AD0032797D /* QueueLocalObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueLocalObject.swift; sourceTree = "<group>"; };
+		F5130809271837AD0032797D /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		F513080A271837AD0032797D /* Multicast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Multicast.swift; sourceTree = "<group>"; };
+		F513080B271837AD0032797D /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		F513080C271837AD0032797D /* Signal_Single.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Single.swift; sourceTree = "<group>"; };
+		F513080D271837AD0032797D /* Signal_Take.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Take.swift; sourceTree = "<group>"; };
+		F513080E271837AD0032797D /* Signal_SideEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_SideEffects.swift; sourceTree = "<group>"; };
+		F513080F271837AD0032797D /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		F5130810271837AD0032797D /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		F5130811271837AD0032797D /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
+		F5130812271837AD0032797D /* ValuePipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValuePipe.swift; sourceTree = "<group>"; };
+		F5130813271837AD0032797D /* Signal_Loop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Loop.swift; sourceTree = "<group>"; };
+		F5130814271837AD0032797D /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		F5130815271837AD0032797D /* Signal_Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Combine.swift; sourceTree = "<group>"; };
+		F5130816271837AD0032797D /* Signal_Timing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Timing.swift; sourceTree = "<group>"; };
+		F5130817271837AD0032797D /* Signal_Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal_Meta.swift; sourceTree = "<group>"; };
+		F513F2CE2714BF40005CBB92 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		F513F2D12714C364005CBB92 /* ExpectedTanks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectedTanks.swift; sourceTree = "<group>"; };
+		F5221525271E21D7000398FA /* TankInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankInfo.swift; sourceTree = "<group>"; };
+		F5221528271ECD39000398FA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		F522152C271EE2C4000398FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		F522152D271EE2C5000398FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F577EBBC271F0C8A00BDF811 /* ParameterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterCell.swift; sourceTree = "<group>"; };
+		F577EBBD271F0C8A00BDF811 /* ParameterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParameterCell.xib; sourceTree = "<group>"; };
+		F577EBC1271F19E800BDF811 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
+		F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F513F2CD2714BED8005CBB92 /* ObjectMapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +132,12 @@
 		F50BF9982714B37600D399BD /* WoT Manager */ = {
 			isa = PBXGroup;
 			children = (
+				F577EBC0271F19DE00BDF811 /* Extensions */,
+				F577EBBA271F0C6500BDF811 /* UI */,
+				F5221527271ECD1E000398FA /* ViewControllers */,
+				F51307FB271837680032797D /* Service */,
+				F50BF9B02714B45200D399BD /* Models */,
+				F50BF9AD2714B38F00D399BD /* Api */,
 				F50BF9992714B37600D399BD /* AppDelegate.swift */,
 				F50BF99B2714B37600D399BD /* SceneDelegate.swift */,
 				F50BF99D2714B37600D399BD /* ViewController.swift */,
@@ -65,6 +147,116 @@
 				F50BF9A72714B37700D399BD /* Info.plist */,
 			);
 			path = "WoT Manager";
+			sourceTree = "<group>";
+		};
+		F50BF9AD2714B38F00D399BD /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				F50BF9AE2714B3C600D399BD /* Main.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		F50BF9B02714B45200D399BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F513F2D02714C34F005CBB92 /* XVM */,
+				F50BF9B12714B45F00D399BD /* Auth.swift */,
+				F513F2CE2714BF40005CBB92 /* UserInfo.swift */,
+				F5221525271E21D7000398FA /* TankInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F51307FB271837680032797D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F51307FC271837AD0032797D /* SwiftSignalKit */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F51307FC271837AD0032797D /* SwiftSignalKit */ = {
+			isa = PBXGroup;
+			children = (
+				F51307FD271837AD0032797D /* Source */,
+			);
+			path = SwiftSignalKit;
+			sourceTree = "<group>";
+		};
+		F51307FD271837AD0032797D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F51307FE271837AD0032797D /* Subscriber.swift */,
+				F51307FF271837AD0032797D /* ThreadPool.swift */,
+				F5130800271837AD0032797D /* Signal_Catch.swift */,
+				F5130801271837AD0032797D /* Signal_Materialize.swift */,
+				F5130802271837AD0032797D /* Signal_Reduce.swift */,
+				F5130803271837AD0032797D /* Signal_Merge.swift */,
+				F5130804271837AD0032797D /* Signal_Mapping.swift */,
+				F5130805271837AD0032797D /* Lock.swift */,
+				F5130806271837AD0032797D /* Timer.swift */,
+				F5130807271837AD0032797D /* Signal_Dispatch.swift */,
+				F5130808271837AD0032797D /* QueueLocalObject.swift */,
+				F5130809271837AD0032797D /* Disposable.swift */,
+				F513080A271837AD0032797D /* Multicast.swift */,
+				F513080B271837AD0032797D /* Bag.swift */,
+				F513080C271837AD0032797D /* Signal_Single.swift */,
+				F513080D271837AD0032797D /* Signal_Take.swift */,
+				F513080E271837AD0032797D /* Signal_SideEffects.swift */,
+				F513080F271837AD0032797D /* Promise.swift */,
+				F5130810271837AD0032797D /* Queue.swift */,
+				F5130811271837AD0032797D /* Atomic.swift */,
+				F5130812271837AD0032797D /* ValuePipe.swift */,
+				F5130813271837AD0032797D /* Signal_Loop.swift */,
+				F5130814271837AD0032797D /* Signal.swift */,
+				F5130815271837AD0032797D /* Signal_Combine.swift */,
+				F5130816271837AD0032797D /* Signal_Timing.swift */,
+				F5130817271837AD0032797D /* Signal_Meta.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F513F2D02714C34F005CBB92 /* XVM */ = {
+			isa = PBXGroup;
+			children = (
+				F513F2D12714C364005CBB92 /* ExpectedTanks.swift */,
+			);
+			path = XVM;
+			sourceTree = "<group>";
+		};
+		F5221527271ECD1E000398FA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F5221528271ECD39000398FA /* StartViewController.swift */,
+				F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F577EBBA271F0C6500BDF811 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F577EBBB271F0C6B00BDF811 /* Cells */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F577EBBB271F0C6B00BDF811 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F577EBBC271F0C8A00BDF811 /* ParameterCell.swift */,
+				F577EBBD271F0C8A00BDF811 /* ParameterCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F577EBC0271F19DE00BDF811 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F577EBC1271F19E800BDF811 /* UIKit.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +275,9 @@
 			dependencies = (
 			);
 			name = "WoT Manager";
+			packageProductDependencies = (
+				F513F2CC2714BED8005CBB92 /* ObjectMapper */,
+			);
 			productName = "WoT Manager";
 			productReference = F50BF9962714B37600D399BD /* WoT Manager.app */;
 			productType = "com.apple.product-type.application";
@@ -109,8 +304,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = F50BF98D2714B37600D399BD;
+			packageReferences = (
+				F513F2CB2714BED8005CBB92 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+			);
 			productRefGroup = F50BF9972714B37600D399BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +327,7 @@
 				F50BF9A62714B37700D399BD /* LaunchScreen.storyboard in Resources */,
 				F50BF9A32714B37700D399BD /* Assets.xcassets in Resources */,
 				F50BF9A12714B37600D399BD /* Main.storyboard in Resources */,
+				F577EBBF271F0C8A00BDF811 /* ParameterCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +338,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5130819271837AD0032797D /* ThreadPool.swift in Sources */,
+				F513082E271837AD0032797D /* Signal.swift in Sources */,
+				F513082C271837AD0032797D /* ValuePipe.swift in Sources */,
+				F513081F271837AD0032797D /* Lock.swift in Sources */,
+				F513082F271837AD0032797D /* Signal_Combine.swift in Sources */,
+				F5130829271837AD0032797D /* Promise.swift in Sources */,
+				F513081B271837AD0032797D /* Signal_Materialize.swift in Sources */,
+				F50BF9B22714B45F00D399BD /* Auth.swift in Sources */,
+				F5130824271837AD0032797D /* Multicast.swift in Sources */,
+				F5130828271837AD0032797D /* Signal_SideEffects.swift in Sources */,
+				F513F2D22714C364005CBB92 /* ExpectedTanks.swift in Sources */,
+				F513081A271837AD0032797D /* Signal_Catch.swift in Sources */,
 				F50BF99E2714B37600D399BD /* ViewController.swift in Sources */,
+				F5130823271837AD0032797D /* Disposable.swift in Sources */,
+				F5130826271837AD0032797D /* Signal_Single.swift in Sources */,
+				F522152A271ECD39000398FA /* StartViewController.swift in Sources */,
+				F5130820271837AD0032797D /* Timer.swift in Sources */,
+				F5130822271837AD0032797D /* QueueLocalObject.swift in Sources */,
+				F5221526271E21D7000398FA /* TankInfo.swift in Sources */,
+				F5130821271837AD0032797D /* Signal_Dispatch.swift in Sources */,
 				F50BF99A2714B37600D399BD /* AppDelegate.swift in Sources */,
+				F5130830271837AD0032797D /* Signal_Timing.swift in Sources */,
+				F50BF9AF2714B3C600D399BD /* Main.swift in Sources */,
+				F513082A271837AD0032797D /* Queue.swift in Sources */,
+				F513081E271837AD0032797D /* Signal_Mapping.swift in Sources */,
+				F513082B271837AD0032797D /* Atomic.swift in Sources */,
+				F513081D271837AD0032797D /* Signal_Merge.swift in Sources */,
+				F5130825271837AD0032797D /* Bag.swift in Sources */,
+				F513F2CF2714BF40005CBB92 /* UserInfo.swift in Sources */,
 				F50BF99C2714B37600D399BD /* SceneDelegate.swift in Sources */,
+				F577EBC2271F19E800BDF811 /* UIKit.swift in Sources */,
+				F5130827271837AD0032797D /* Signal_Take.swift in Sources */,
+				F5C0B32F27246E8A008885EB /* SelectGameViewController.swift in Sources */,
+				F577EBBE271F0C8A00BDF811 /* ParameterCell.swift in Sources */,
+				F5130831271837AD0032797D /* Signal_Meta.swift in Sources */,
+				F5130818271837AD0032797D /* Subscriber.swift in Sources */,
+				F513082D271837AD0032797D /* Signal_Loop.swift in Sources */,
+				F513081C271837AD0032797D /* Signal_Reduce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +386,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F50BF9A02714B37600D399BD /* Base */,
+				F522152C271EE2C4000398FA /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -159,6 +395,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F50BF9A52714B37700D399BD /* Base */,
+				F522152D271EE2C5000398FA /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -231,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -285,16 +524,19 @@
 		F50BF9AB2714B37700D399BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = _AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V5YRQJ5ATM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WoT Manager/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "KTTC Lite";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,27 +544,30 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.npteam.WoT-Manager";
+				PRODUCT_BUNDLE_IDENTIFIER = com.npteam.kttc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F50BF9AC2714B37700D399BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = _AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V5YRQJ5ATM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WoT Manager/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "KTTC Lite";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,11 +575,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.npteam.WoT-Manager";
+				PRODUCT_BUNDLE_IDENTIFIER = com.npteam.kttc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -360,6 +605,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F513F2CB2714BED8005CBB92 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F513F2CC2714BED8005CBB92 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F513F2CB2714BED8005CBB92 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F50BF98E2714B37600D399BD /* Project object */;
 }
