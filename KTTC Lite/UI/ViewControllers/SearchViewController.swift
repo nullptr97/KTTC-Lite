@@ -1,5 +1,5 @@
 //
-//  StartViewController.swift
+//  SearchViewController.swift
 //  WoT Manager
 //
 //  Created by Ярослав Стрельников on 19.10.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StartViewController: BaseController {
+class SearchViewController: BaseController {
     var mainTable: UITableView!
     
     var gameType: KTTCApi.GameType
@@ -44,7 +44,7 @@ class StartViewController: BaseController {
     }
 }
 
-extension StartViewController: UITableViewDataSource {
+extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         users.count
     }
@@ -59,26 +59,25 @@ extension StartViewController: UITableViewDataSource {
     }
 }
 
-extension StartViewController: UITableViewDelegate {
+extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-        print(gameType)
         
         switch gameType {
         case .bb:
-            guard let viewController = (view.window?.rootViewController as? UINavigationController)?.viewControllers.controller(byIndex: 1) as? ViewController<AnyTanksStats> else { return }
+            guard let viewController = (view.window?.rootViewController as? UINavigationController)?.viewControllers.controller(byIndex: 1) as? StatisticsViewController<AnyTanksStats> else { return }
             viewController.runProcess(accountId: users[indexPath.row].accountId ?? 0, gameType: .bb, nickName: users[indexPath.row].nickname)
         case .blitz:
-            guard let viewController = (view.window?.rootViewController as? UINavigationController)?.viewControllers.controller(byIndex: 1) as? ViewController<AnyBlitzTanksStats> else { return }
+            guard let viewController = (view.window?.rootViewController as? UINavigationController)?.viewControllers.controller(byIndex: 1) as? StatisticsViewController<AnyBlitzTanksStats> else { return }
             viewController.runProcess(accountId: users[indexPath.row].accountId ?? 0, gameType: .blitz, nickName: users[indexPath.row].nickname)
         }
         
         users.erase()
+        mainTable.reloadData()
     }
 }
 
-extension StartViewController: UISearchBarDelegate {
+extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let search = searchBar.text, !search.isEmpty else { return }
         api.request(with: UserInfoWithArray<User>.self, .account, .list, [.search: (searchBar.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)]).start { [weak self] users in
@@ -100,7 +99,7 @@ extension StartViewController: UISearchBarDelegate {
     }
 }
 
-extension StartViewController: UISearchResultsUpdating, UISearchControllerDelegate {
+extension SearchViewController: UISearchResultsUpdating, UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) { }
 }
 

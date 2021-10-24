@@ -15,14 +15,19 @@ class SelectGameViewController: BaseController {
         navigationItem.largeTitleDisplayMode = .always
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     @IBAction func didSelectWot(_ sender: UIButton) {
-        let viewController = ViewController<AnyTanksStats>()
+        let viewController = StatisticsViewController<AnyTanksStats>()
         viewController.gameType = .bb
         navigationController?.show(viewController, sender: sender)
     }
     
     @IBAction func didSelectWotBlitz(_ sender: UIButton) {
-        let viewController = ViewController<AnyBlitzTanksStats>()
+        let viewController = StatisticsViewController<AnyBlitzTanksStats>()
         viewController.gameType = .blitz
         navigationController?.show(viewController, sender: sender)
     }

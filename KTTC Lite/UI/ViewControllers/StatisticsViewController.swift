@@ -152,7 +152,7 @@ open class BaseController: UIViewController {
     let api: KTTCApi = KTTCApi()
 }
 
-class ViewController<T>: BaseController, UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate where T: Mappable {
+class StatisticsViewController<T>: BaseController, UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate where T: Mappable {
     var collectionView: UICollectionView!
     var activityIndicator: UIActivityIndicatorView!
     var updater = UIRefreshControl()
@@ -182,7 +182,7 @@ class ViewController<T>: BaseController, UISearchResultsUpdating, UISearchContro
     lazy var snapshot = makeSnapshot()
     
     var searchController: UISearchController!
-    private var startController: StartViewController { StartViewController(by: gameType) }
+    private var startController: SearchViewController { SearchViewController(by: gameType) }
     
     private var needCalculateData = NeedCalculateData()
     
@@ -202,15 +202,18 @@ class ViewController<T>: BaseController, UISearchResultsUpdating, UISearchContro
         searchController = UISearchController(searchResultsController: startController)
         
         searchController.searchResultsUpdater = self
-        searchController.searchBar.sizeToFit()
-        searchController.searchBar.searchBarStyle = .default
+        searchController.searchBar.searchBarStyle = .minimal
         searchController.searchBar.placeholder = "Введите никнейм игрока"
-        navigationItem.searchController = searchController
         searchController.hidesNavigationBarDuringPresentation = true
         searchController.obscuresBackgroundDuringPresentation = true
         
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
         searchController.delegate = self
         searchController.searchBar.delegate = self
+        searchController.modalTransitionStyle = .crossDissolve
+        
         definesPresentationContext = true
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: configureLayout())
@@ -229,6 +232,11 @@ class ViewController<T>: BaseController, UISearchResultsUpdating, UISearchContro
         dataSource.apply(snapshot)
         
         if accountId > 0 { getAnotherData(with: accountId) }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     func nullableAllData() {
@@ -466,6 +474,10 @@ class ViewController<T>: BaseController, UISearchResultsUpdating, UISearchContro
                             cell.parameterLabel.text = "\((dictionary[dictionary.keys.first ?? ""] ?? 0).round(to: 2))"
                         case "wn8":
                             cell.parameterLabel.textColor = .xwmColor(from: .wn8, with: Int(value ?? 0))
+                            UIView.transition(with: self.navigationController!.navigationBar, duration: 0.5, options: [.preferredFramesPerSecond60]) {
+                                self.navigationController?.navigationBar.tintColor = .xwmColor(from: .wn8, with: Int(value ?? 0))
+                            }
+
                             cell.parameterLabel.text = "\((dictionary[dictionary.keys.first ?? ""] ?? 0).round(to: 2))"
                         case "winrate":
                             cell.parameterLabel.textColor = .xwmColor(from: .winrate, with: Int(value ?? 0))
@@ -509,7 +521,7 @@ class ViewController<T>: BaseController, UISearchResultsUpdating, UISearchContro
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let search = searchController.searchBar.text, !search.isEmpty else { return }
-        guard let searchViewController = searchController.searchResultsController as? StartViewController else { return }
+        guard let searchViewController = searchController.searchResultsController as? SearchViewController else { return }
         guard isSearch else { return }
         api.request(with: UserInfoWithArray<User>.self, .account, .list, [.search: search.trimmingCharacters(in: .whitespacesAndNewlines)]).start { users in
             searchViewController.users = users.data ?? []
@@ -710,7 +722,7 @@ extension UIColor {
     }
 }
 
-extension ViewController {
+extension StatisticsViewController {
     func configureLayout() -> UICollectionViewCompositionalLayout {
         let layout = layout()
         return layout

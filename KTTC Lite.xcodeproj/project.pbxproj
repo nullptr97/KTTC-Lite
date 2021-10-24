@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F50BF99A2714B37600D399BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF9992714B37600D399BD /* AppDelegate.swift */; };
 		F50BF99C2714B37600D399BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF99B2714B37600D399BD /* SceneDelegate.swift */; };
-		F50BF99E2714B37600D399BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF99D2714B37600D399BD /* ViewController.swift */; };
+		F50BF99E2714B37600D399BD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF99D2714B37600D399BD /* StatisticsViewController.swift */; };
 		F50BF9A12714B37600D399BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BF99F2714B37600D399BD /* Main.storyboard */; };
 		F50BF9A32714B37700D399BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50BF9A22714B37700D399BD /* Assets.xcassets */; };
 		F50BF9A62714B37700D399BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BF9A42714B37700D399BD /* LaunchScreen.storyboard */; };
@@ -45,7 +45,7 @@
 		F513F2CF2714BF40005CBB92 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513F2CE2714BF40005CBB92 /* UserInfo.swift */; };
 		F513F2D22714C364005CBB92 /* ExpectedTanks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F513F2D12714C364005CBB92 /* ExpectedTanks.swift */; };
 		F5221526271E21D7000398FA /* TankInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5221525271E21D7000398FA /* TankInfo.swift */; };
-		F522152A271ECD39000398FA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5221528271ECD39000398FA /* StartViewController.swift */; };
+		F522152A271ECD39000398FA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5221528271ECD39000398FA /* SearchViewController.swift */; };
 		F577EBBE271F0C8A00BDF811 /* ParameterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EBBC271F0C8A00BDF811 /* ParameterCell.swift */; };
 		F577EBBF271F0C8A00BDF811 /* ParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F577EBBD271F0C8A00BDF811 /* ParameterCell.xib */; };
 		F577EBC2271F19E800BDF811 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EBC1271F19E800BDF811 /* UIKit.swift */; };
@@ -53,10 +53,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F50BF9962714B37600D399BD /* WoT Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WoT Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50BF9962714B37600D399BD /* KTTC Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KTTC Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BF9992714B37600D399BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50BF99B2714B37600D399BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F50BF99D2714B37600D399BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F50BF99D2714B37600D399BD /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		F50BF9A02714B37600D399BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50BF9A22714B37700D399BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50BF9A52714B37700D399BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		F513F2CE2714BF40005CBB92 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F513F2D12714C364005CBB92 /* ExpectedTanks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectedTanks.swift; sourceTree = "<group>"; };
 		F5221525271E21D7000398FA /* TankInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankInfo.swift; sourceTree = "<group>"; };
-		F5221528271ECD39000398FA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		F5221528271ECD39000398FA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F522152C271EE2C4000398FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		F522152D271EE2C5000398FA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F577EBBC271F0C8A00BDF811 /* ParameterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterCell.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		F50BF98D2714B37600D399BD = {
 			isa = PBXGroup;
 			children = (
-				F50BF9982714B37600D399BD /* WoT Manager */,
+				F50BF9982714B37600D399BD /* KTTC Lite */,
 				F50BF9972714B37600D399BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,29 +124,20 @@
 		F50BF9972714B37600D399BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F50BF9962714B37600D399BD /* WoT Manager.app */,
+				F50BF9962714B37600D399BD /* KTTC Lite.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F50BF9982714B37600D399BD /* WoT Manager */ = {
+		F50BF9982714B37600D399BD /* KTTC Lite */ = {
 			isa = PBXGroup;
 			children = (
+				F5C0B3352725A6F7008885EB /* Configs */,
 				F577EBC0271F19DE00BDF811 /* Extensions */,
-				F577EBBA271F0C6500BDF811 /* UI */,
-				F5221527271ECD1E000398FA /* ViewControllers */,
 				F51307FB271837680032797D /* Service */,
-				F50BF9B02714B45200D399BD /* Models */,
-				F50BF9AD2714B38F00D399BD /* Api */,
-				F50BF9992714B37600D399BD /* AppDelegate.swift */,
-				F50BF99B2714B37600D399BD /* SceneDelegate.swift */,
-				F50BF99D2714B37600D399BD /* ViewController.swift */,
-				F50BF99F2714B37600D399BD /* Main.storyboard */,
-				F50BF9A22714B37700D399BD /* Assets.xcassets */,
-				F50BF9A42714B37700D399BD /* LaunchScreen.storyboard */,
-				F50BF9A72714B37700D399BD /* Info.plist */,
+				F577EBBA271F0C6500BDF811 /* UI */,
 			);
-			path = "WoT Manager";
+			path = "KTTC Lite";
 			sourceTree = "<group>";
 		};
 		F50BF9AD2714B38F00D399BD /* Api */ = {
@@ -171,7 +162,10 @@
 		F51307FB271837680032797D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				F51307FC271837AD0032797D /* SwiftSignalKit */,
+				F50BF9AD2714B38F00D399BD /* Api */,
+				F5C0B3312725A61B008885EB /* Delegates */,
+				F50BF9B02714B45200D399BD /* Models */,
+				F5C0B3302725A601008885EB /* Packages */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -228,7 +222,8 @@
 		F5221527271ECD1E000398FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F5221528271ECD39000398FA /* StartViewController.swift */,
+				F5221528271ECD39000398FA /* SearchViewController.swift */,
+				F50BF99D2714B37600D399BD /* StatisticsViewController.swift */,
 				F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */,
 			);
 			path = ViewControllers;
@@ -237,7 +232,11 @@
 		F577EBBA271F0C6500BDF811 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F5C0B3342725A6D3008885EB /* Assets */,
 				F577EBBB271F0C6B00BDF811 /* Cells */,
+				F5C0B3322725A6B7008885EB /* Nibs */,
+				F5C0B3332725A6C6008885EB /* Storyboards */,
+				F5221527271ECD1E000398FA /* ViewControllers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -259,12 +258,61 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F5C0B3302725A601008885EB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F51307FC271837AD0032797D /* SwiftSignalKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		F5C0B3312725A61B008885EB /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F50BF9992714B37600D399BD /* AppDelegate.swift */,
+				F50BF99B2714B37600D399BD /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		F5C0B3322725A6B7008885EB /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		F5C0B3332725A6C6008885EB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F50BF99F2714B37600D399BD /* Main.storyboard */,
+				F50BF9A42714B37700D399BD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F5C0B3342725A6D3008885EB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F50BF9A22714B37700D399BD /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F5C0B3352725A6F7008885EB /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				F50BF9A72714B37700D399BD /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F50BF9952714B37600D399BD /* WoT Manager */ = {
+		F50BF9952714B37600D399BD /* KTTC Lite */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F50BF9AA2714B37700D399BD /* Build configuration list for PBXNativeTarget "WoT Manager" */;
+			buildConfigurationList = F50BF9AA2714B37700D399BD /* Build configuration list for PBXNativeTarget "KTTC Lite" */;
 			buildPhases = (
 				F50BF9922714B37600D399BD /* Sources */,
 				F50BF9932714B37600D399BD /* Frameworks */,
@@ -274,12 +322,12 @@
 			);
 			dependencies = (
 			);
-			name = "WoT Manager";
+			name = "KTTC Lite";
 			packageProductDependencies = (
 				F513F2CC2714BED8005CBB92 /* ObjectMapper */,
 			);
 			productName = "WoT Manager";
-			productReference = F50BF9962714B37600D399BD /* WoT Manager.app */;
+			productReference = F50BF9962714B37600D399BD /* KTTC Lite.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -297,7 +345,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F50BF9912714B37600D399BD /* Build configuration list for PBXProject "WoT Manager" */;
+			buildConfigurationList = F50BF9912714B37600D399BD /* Build configuration list for PBXProject "KTTC Lite" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -314,7 +362,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F50BF9952714B37600D399BD /* WoT Manager */,
+				F50BF9952714B37600D399BD /* KTTC Lite */,
 			);
 		};
 /* End PBXProject section */
@@ -350,10 +398,10 @@
 				F5130828271837AD0032797D /* Signal_SideEffects.swift in Sources */,
 				F513F2D22714C364005CBB92 /* ExpectedTanks.swift in Sources */,
 				F513081A271837AD0032797D /* Signal_Catch.swift in Sources */,
-				F50BF99E2714B37600D399BD /* ViewController.swift in Sources */,
+				F50BF99E2714B37600D399BD /* StatisticsViewController.swift in Sources */,
 				F5130823271837AD0032797D /* Disposable.swift in Sources */,
 				F5130826271837AD0032797D /* Signal_Single.swift in Sources */,
-				F522152A271ECD39000398FA /* StartViewController.swift in Sources */,
+				F522152A271ECD39000398FA /* SearchViewController.swift in Sources */,
 				F5130820271837AD0032797D /* Timer.swift in Sources */,
 				F5130822271837AD0032797D /* QueueLocalObject.swift in Sources */,
 				F5221526271E21D7000398FA /* TankInfo.swift in Sources */,
@@ -531,7 +579,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V5YRQJ5ATM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WoT Manager/Info.plist";
+				INFOPLIST_FILE = "KTTC Lite/Configs/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "KTTC Lite";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -562,7 +610,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V5YRQJ5ATM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WoT Manager/Info.plist";
+				INFOPLIST_FILE = "KTTC Lite/Configs/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "KTTC Lite";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -586,7 +634,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F50BF9912714B37600D399BD /* Build configuration list for PBXProject "WoT Manager" */ = {
+		F50BF9912714B37600D399BD /* Build configuration list for PBXProject "KTTC Lite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F50BF9A82714B37700D399BD /* Debug */,
@@ -595,7 +643,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F50BF9AA2714B37700D399BD /* Build configuration list for PBXNativeTarget "WoT Manager" */ = {
+		F50BF9AA2714B37700D399BD /* Build configuration list for PBXNativeTarget "KTTC Lite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F50BF9AB2714B37700D399BD /* Debug */,
