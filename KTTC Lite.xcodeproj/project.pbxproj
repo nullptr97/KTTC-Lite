@@ -10,7 +10,6 @@
 		F506C2DA272848620070348B /* StackableOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F506C2D9272848620070348B /* StackableOperations.swift */; };
 		F50BF99A2714B37600D399BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF9992714B37600D399BD /* AppDelegate.swift */; };
 		F50BF99C2714B37600D399BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF99B2714B37600D399BD /* SceneDelegate.swift */; };
-		F50BF99E2714B37600D399BD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF99D2714B37600D399BD /* StatisticsViewController.swift */; };
 		F50BF9A12714B37600D399BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BF99F2714B37600D399BD /* Main.storyboard */; };
 		F50BF9A32714B37700D399BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50BF9A22714B37700D399BD /* Assets.xcassets */; };
 		F50BF9A62714B37700D399BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50BF9A42714B37700D399BD /* LaunchScreen.storyboard */; };
@@ -74,6 +73,11 @@
 		F5B85F2F2728777800EDC245 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F5B85F2E2728777800EDC245 /* Lottie */; };
 		F5B85F322728779400EDC245 /* input_name.json in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F312728779400EDC245 /* input_name.json */; };
 		F5B85F34272877B900EDC245 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F33272877B900EDC245 /* search.json */; };
+		F5B85F3627287BF000EDC245 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B85F3527287BF000EDC245 /* StatisticsViewController.swift */; };
+		F5B85F3C27287EBD00EDC245 /* n01cWWAODlY.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F3827287EBD00EDC245 /* n01cWWAODlY.jpeg */; };
+		F5B85F3D27287EBD00EDC245 /* XRilbUj-qrU.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F3927287EBD00EDC245 /* XRilbUj-qrU.jpeg */; };
+		F5B85F3E27287EBD00EDC245 /* fVPzs3eGsXc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F3A27287EBD00EDC245 /* fVPzs3eGsXc.jpeg */; };
+		F5B85F3F27287EBD00EDC245 /* Shp0Oj-TWig.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F3B27287EBD00EDC245 /* Shp0Oj-TWig.jpeg */; };
 		F5C0B32F27246E8A008885EB /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +86,6 @@
 		F50BF9962714B37600D399BD /* KTTC Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KTTC Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BF9992714B37600D399BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50BF99B2714B37600D399BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F50BF99D2714B37600D399BD /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatisticsViewController.swift; path = "KTTC Lite/UI/ViewControllers/StatisticsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		F50BF9A02714B37600D399BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50BF9A22714B37700D399BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50BF9A52714B37700D399BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -145,6 +148,11 @@
 		F5A34F94272826D4003A13DB /* TanksList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TanksList.json; sourceTree = "<group>"; };
 		F5B85F312728779400EDC245 /* input_name.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = input_name.json; sourceTree = "<group>"; };
 		F5B85F33272877B900EDC245 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		F5B85F3527287BF000EDC245 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		F5B85F3827287EBD00EDC245 /* n01cWWAODlY.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = n01cWWAODlY.jpeg; sourceTree = "<group>"; };
+		F5B85F3927287EBD00EDC245 /* XRilbUj-qrU.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "XRilbUj-qrU.jpeg"; sourceTree = "<group>"; };
+		F5B85F3A27287EBD00EDC245 /* fVPzs3eGsXc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fVPzs3eGsXc.jpeg; sourceTree = "<group>"; };
+		F5B85F3B27287EBD00EDC245 /* Shp0Oj-TWig.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Shp0Oj-TWig.jpeg"; sourceTree = "<group>"; };
 		F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +295,7 @@
 				F5B85F302728777D00EDC245 /* Animations */,
 				F5C0B3342725A6D3008885EB /* Assets */,
 				F577EBBB271F0C6B00BDF811 /* Cells */,
+				F5B85F3727287EA900EDC245 /* Images */,
 				F5C0B3322725A6B7008885EB /* Nibs */,
 				F5C0B3332725A6C6008885EB /* Storyboards */,
 				F5221527271ECD1E000398FA /* ViewControllers */,
@@ -343,7 +352,7 @@
 			children = (
 				F5A34F8727281EA5003A13DB /* StatisticsInterfaces.swift */,
 				F5A34F8827281EA5003A13DB /* StatisticsPresenter.swift */,
-				F50BF99D2714B37600D399BD /* StatisticsViewController.swift */,
+				F5B85F3527287BF000EDC245 /* StatisticsViewController.swift */,
 				F5A34F8A27281EA5003A13DB /* StatisticsFormatter.swift */,
 				F5A34F8B27281EA5003A13DB /* StatisticsInteractor.swift */,
 				F5A34F8C27281EA5003A13DB /* StatisticsWireframe.swift */,
@@ -366,6 +375,17 @@
 				F5B85F312728779400EDC245 /* input_name.json */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		F5B85F3727287EA900EDC245 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F5B85F3A27287EBD00EDC245 /* fVPzs3eGsXc.jpeg */,
+				F5B85F3827287EBD00EDC245 /* n01cWWAODlY.jpeg */,
+				F5B85F3B27287EBD00EDC245 /* Shp0Oj-TWig.jpeg */,
+				F5B85F3927287EBD00EDC245 /* XRilbUj-qrU.jpeg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		F5C0B3302725A601008885EB /* Packages */ = {
@@ -490,9 +510,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B85F3F27287EBD00EDC245 /* Shp0Oj-TWig.jpeg in Resources */,
 				F5A34F95272829AF003A13DB /* BlitzTanksList.json in Resources */,
+				F5B85F3D27287EBD00EDC245 /* XRilbUj-qrU.jpeg in Resources */,
 				F5B85F322728779400EDC245 /* input_name.json in Resources */,
+				F5B85F3C27287EBD00EDC245 /* n01cWWAODlY.jpeg in Resources */,
 				F5B85F34272877B900EDC245 /* search.json in Resources */,
+				F5B85F3E27287EBD00EDC245 /* fVPzs3eGsXc.jpeg in Resources */,
 				F5A34F96272829AF003A13DB /* TanksList.json in Resources */,
 				F50BF9A62714B37700D399BD /* LaunchScreen.storyboard in Resources */,
 				F50BF9A32714B37700D399BD /* Assets.xcassets in Resources */,
@@ -522,7 +546,6 @@
 				F5130828271837AD0032797D /* Signal_SideEffects.swift in Sources */,
 				F513F2D22714C364005CBB92 /* ExpectedTanks.swift in Sources */,
 				F513081A271837AD0032797D /* Signal_Catch.swift in Sources */,
-				F50BF99E2714B37600D399BD /* StatisticsViewController.swift in Sources */,
 				F5130823271837AD0032797D /* Disposable.swift in Sources */,
 				F5130826271837AD0032797D /* Signal_Single.swift in Sources */,
 				F522152A271ECD39000398FA /* SearchViewController.swift in Sources */,
@@ -532,6 +555,7 @@
 				F5130822271837AD0032797D /* QueueLocalObject.swift in Sources */,
 				F5221526271E21D7000398FA /* TankInfo.swift in Sources */,
 				F5130821271837AD0032797D /* Signal_Dispatch.swift in Sources */,
+				F5B85F3627287BF000EDC245 /* StatisticsViewController.swift in Sources */,
 				F50BF99A2714B37600D399BD /* AppDelegate.swift in Sources */,
 				F5130830271837AD0032797D /* Signal_Timing.swift in Sources */,
 				F5A34F72272813FD003A13DB /* SearchPresenter.swift in Sources */,
