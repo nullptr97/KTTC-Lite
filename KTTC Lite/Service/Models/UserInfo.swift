@@ -79,13 +79,19 @@ struct AnyUserData: Mappable {
     }
 }
 
-struct AnyTanksStats: Mappable {
+protocol AllStatistics {
+    var all: [String: Double]? { get set }
+    var tankId: Int? { get set }
+}
+
+struct AnyTanksStats: Mappable, AllStatistics {
     var clan: [String: Int]?
     var strongholdSkirmish: [String: Double]?
     var regularTeam: [String: Int]?
     var accountId, maxXP: Int?
     var company: [String: Int]?
-    var all, strongholdDefense: [String: Double]?
+    var all: [String: Double]?
+    var strongholdDefense: [String: Double]?
     var maxFrags: Int?
     var team: [String: Int]?
     var globalmap: [String: Double]?
@@ -111,8 +117,8 @@ struct AnyTanksStats: Mappable {
     }
 }
 
-struct AnyBlitzTanksStats: Mappable {
-    var all: [String: Int]?
+struct AnyBlitzTanksStats: Mappable, AllStatistics {
+    var all: [String: Double]?
     var lastBattleTime, accountId, maxXP, inGarageUpdated: Int?
     var maxFrags: Int?
     var markOfMastery, battleLifeTime: Int?

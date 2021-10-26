@@ -93,10 +93,44 @@ extension UIView {
         layer.borderColor = color.cgColor
         clipsToBounds = true
     }
+    
+    func setBlurBackground(style: UIBlurEffect.Style, frame: CGRect = .zero, withAlpha alpha: CGFloat = 1) {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = frame == .zero ? bounds : frame
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurView.alpha = alpha
+        insertSubview(blurView, at: 0)
+    }
 }
 
 /// MARK: UIButton
 extension UIButton {
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        next?.touchesBegan(touches, with: event)
+    }
+   
+    open override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        next?.touchesMoved(touches, with: event)
+    }
+   
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        next?.touchesEnded(touches, with: event)
+    }
+   
+    open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        next?.touchesCancelled(touches, with: event)
+    }
+   
+    open override func touchesEstimatedPropertiesUpdated(_ touches: Set<UITouch>) {
+        super.touchesEstimatedPropertiesUpdated(touches)
+        next?.touchesEstimatedPropertiesUpdated(touches)
+    }
+
     func setEnabled(_ state: Bool) {
         UIView.animate(withDuration: 0.3, animations: { [weak self] in
             self?.alpha = state ? 1 : 0.5
@@ -135,6 +169,26 @@ extension UINib {
 
 /// MARK: UIImage
 extension UIImage {
+    var coreImage: CIImage? { return CIImage(image: self) }
+
+    var grayScale: UIImage {
+        let imageRect:CGRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+
+        let colorSpace = CGColorSpaceCreateDeviceGray()
+        let width = size.width
+        let height = size.height
+
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue)
+
+        let context = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)
+        context?.draw(cgImage!, in: imageRect)
+        let imageRef = context!.makeImage()
+
+        let newImage = UIImage(cgImage: imageRef!)
+
+        return newImage
+    }
+
     typealias Megapixels = Int
     
     var megapixels: Megapixels {
@@ -232,20 +286,137 @@ extension CGFloat {
 
 /// MARK: UIColor
 extension UIColor {
+    open class func xwmColor(from state: StatType, with value: Int) -> UIColor {
+        switch state {
+        case .wn6, .wn7:
+            if Range(0...469).contains(value) {
+                return .color(from: 0xff2901)
+            } else if Range(470...859).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if Range(860...1224).contains(value) {
+                return .color(from: 0xffe704)
+            } else if Range(1225...1634).contains(value) {
+                return .color(from: 0x59e500)
+            } else if Range(1635...1989).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        case .wn8:
+            if Range(0...314).contains(value) {
+                return .color(from: 0xff2901)
+            } else if Range(315...754).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if Range(755...1314).contains(value) {
+                return .color(from: 0xffe704)
+            } else if Range(1315...1964).contains(value) {
+                return .color(from: 0x59e500)
+            } else if Range(1965...2524).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        case .eff:
+            if Range(0...629).contains(value) {
+                return .color(from: 0xff2901)
+            } else if Range(630...859).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if Range(860...1139).contains(value) {
+                return .color(from: 0xffe704)
+            } else if Range(1140...1459).contains(value) {
+                return .color(from: 0x59e500)
+            } else if Range(1460...1734).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        case .winrate:
+            if Range(0...46).contains(value) {
+                return .color(from: 0xff2901)
+            } else if Range(47...48).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if Range(49...51).contains(value) {
+                return .color(from: 0xffe704)
+            } else if Range(52...56).contains(value) {
+                return .color(from: 0x59e500)
+            } else if Range(57...64).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        case .xte:
+            if Range(0...314).contains(value) {
+                return .color(from: 0xff2901)
+            } else if Range(315...754).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if Range(755...1314).contains(value) {
+                return .color(from: 0xffe704)
+            } else if Range(1315...1964).contains(value) {
+                return .color(from: 0x59e500)
+            } else if Range(1965...2524).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        case .battles:
+            if Range(0...1500).contains(value) {
+                return .color(from: 0xff2901)
+            } else if Range(1001...4000).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if Range(4001...10000).contains(value) {
+                return .color(from: 0xffe704)
+            } else if Range(10001...15000).contains(value) {
+                return .color(from: 0x59e500)
+            } else if Range(15001...20000).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        case .damage:
+            if Range(0...500).contains(value) {
+                return .color(from: 0xff2901)
+            } else if Range(501...750).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if Range(751...1000).contains(value) {
+                return .color(from: 0xffe704)
+            } else if Range(1001...1800).contains(value) {
+                return .color(from: 0x59e500)
+            } else if Range(1801...2500).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        case .frags:
+            if Range(1...2).contains(value) {
+                return .color(from: 0xff2901)
+            } else if Range(2...3).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if Range(3...4).contains(value) {
+                return .color(from: 0xffe704)
+            } else if Range(4...5).contains(value) {
+                return .color(from: 0x59e500)
+            } else if Range(5...6).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        }
+    }
+
     open class var systemBorder: UIColor {
         if #available(iOS 13, *) {
             return UIColor { traitCollection in
-                return .color(from: traitCollection.userInterfaceStyle == .dark ? 0x252a32 : 0x252a32).withAlphaComponent(traitCollection.userInterfaceStyle == .dark ? 1 : 0.15)
+                return .color(from: traitCollection.userInterfaceStyle == .dark ? 0x222222 : 0xdddddd)
             }
         } else {
-            return .color(from: 0x252a32).withAlphaComponent(0.15)
+            return .color(from: 0x252a32)
         }
     }
     
     open class var systemBackground: UIColor {
         if #available(iOS 13, *) {
             return UIColor { traitCollection in
-                return .color(from: traitCollection.userInterfaceStyle == .dark ? 0x100f15 : 0xFFFFFF)
+                return .color(from: traitCollection.userInterfaceStyle == .dark ? 0x060506 : 0xFFFFFF)
             }
         } else {
             return .color(from: 0xFFFFFF)
@@ -282,6 +453,16 @@ extension UIColor {
         }
     }
     
+    open class var dividerColor: UIColor {
+        if #available(iOS 13, *) {
+            return UIColor { traitCollection in
+                return .color(from: traitCollection.userInterfaceStyle == .dark ? 0x03071c : 0xfcf8e3)
+            }
+        } else {
+            return .color(from: 0xFCF8E3)
+        }
+    }
+    
     open class var label: UIColor {
         if #available(iOS 13, *) {
             return UIColor { traitCollection in
@@ -308,4 +489,53 @@ extension CGColor {
         let blue = CGFloat(hex & 0xFF) / 256.0
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0).cgColor
     }
+}
+
+/// MARK: CIImage
+extension CIImage {
+    func applying(saturation value: NSNumber) -> CIImage? {
+        return applyingFilter("CIColorControls", parameters: [kCIInputSaturationKey: value])
+    }
+    var grayscale: CIImage? { return applying(saturation: 0) }
+    var colored: CIImage? { return applying(saturation: 1) }
+    
+    var uiImage: UIImage? { return UIImage(ciImage: self) }
+
+    func applying(contrast value: NSNumber) -> CIImage? {
+        return applyingFilter("CIColorControls", parameters: [kCIInputContrastKey: value])
+    }
+
+    func renderedImage() -> UIImage? {
+        guard let image = uiImage else { return nil }
+        return UIGraphicsImageRenderer(size: image.size, format: image.imageRendererFormat).image { _ in
+            image.draw(in: CGRect(origin: .zero, size: image.size))
+        }
+    }
+}
+
+/// MARK: UIGestureRecognizer
+extension UIGestureRecognizer {
+    func add(toViews views: UIView...) {
+        views.forEach { $0.addGestureRecognizer(self) }
+    }
+}
+
+/// MARK: UITableViewCell
+extension UITableViewCell {
+    static var reuseIdentifier: String {
+        return "\(self)"
+    }
+    
+    static var nib: UINib? {
+        return UINib(nibName: UITableViewCell.reuseIdentifier, bundle: nil)
+    }
+    
+    static var `class`: AnyClass {
+        return Self.self
+    }
+}
+
+/// MARK: UIConfigurable
+public protocol UIConfigurable {
+    func setUI()
 }

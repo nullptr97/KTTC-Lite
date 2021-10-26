@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F506C2DA272848620070348B /* StackableOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F506C2D9272848620070348B /* StackableOperations.swift */; };
 		F50BF99A2714B37600D399BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF9992714B37600D399BD /* AppDelegate.swift */; };
 		F50BF99C2714B37600D399BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF99B2714B37600D399BD /* SceneDelegate.swift */; };
 		F50BF99E2714B37600D399BD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50BF99D2714B37600D399BD /* StatisticsViewController.swift */; };
@@ -49,14 +50,39 @@
 		F577EBBE271F0C8A00BDF811 /* ParameterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EBBC271F0C8A00BDF811 /* ParameterCell.swift */; };
 		F577EBBF271F0C8A00BDF811 /* ParameterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F577EBBD271F0C8A00BDF811 /* ParameterCell.xib */; };
 		F577EBC2271F19E800BDF811 /* UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577EBC1271F19E800BDF811 /* UIKit.swift */; };
+		F5A34F6927271D4B003A13DB /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = F5A34F6827271D4B003A13DB /* SPAlert */; };
+		F5A34F71272813FD003A13DB /* SearchInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F6B272813FD003A13DB /* SearchInterfaces.swift */; };
+		F5A34F72272813FD003A13DB /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F6C272813FD003A13DB /* SearchPresenter.swift */; };
+		F5A34F74272813FD003A13DB /* SearchFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F6E272813FD003A13DB /* SearchFormatter.swift */; };
+		F5A34F75272813FD003A13DB /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F6F272813FD003A13DB /* SearchInteractor.swift */; };
+		F5A34F76272813FD003A13DB /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F70272813FD003A13DB /* SearchWireframe.swift */; };
+		F5A34F7E27281475003A13DB /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F7827281475003A13DB /* BaseWireframe.swift */; };
+		F5A34F7F27281475003A13DB /* FormatterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F7927281475003A13DB /* FormatterInterface.swift */; };
+		F5A34F8027281475003A13DB /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F7A27281475003A13DB /* UIStoryboardExtension.swift */; };
+		F5A34F8127281475003A13DB /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F7B27281475003A13DB /* PresenterInterface.swift */; };
+		F5A34F8227281475003A13DB /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F7C27281475003A13DB /* ViewInterface.swift */; };
+		F5A34F8327281475003A13DB /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F7D27281475003A13DB /* InteractorInterface.swift */; };
+		F5A34F85272815EB003A13DB /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F84272815EB003A13DB /* Foundation.swift */; };
+		F5A34F8D27281EA5003A13DB /* StatisticsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F8727281EA5003A13DB /* StatisticsInterfaces.swift */; };
+		F5A34F8E27281EA5003A13DB /* StatisticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F8827281EA5003A13DB /* StatisticsPresenter.swift */; };
+		F5A34F9027281EA5003A13DB /* StatisticsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F8A27281EA5003A13DB /* StatisticsFormatter.swift */; };
+		F5A34F9127281EA5003A13DB /* StatisticsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F8B27281EA5003A13DB /* StatisticsInteractor.swift */; };
+		F5A34F9227281EA5003A13DB /* StatisticsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A34F8C27281EA5003A13DB /* StatisticsWireframe.swift */; };
+		F5A34F95272829AF003A13DB /* BlitzTanksList.json in Resources */ = {isa = PBXBuildFile; fileRef = F5A34F93272826A3003A13DB /* BlitzTanksList.json */; };
+		F5A34F96272829AF003A13DB /* TanksList.json in Resources */ = {isa = PBXBuildFile; fileRef = F5A34F94272826D4003A13DB /* TanksList.json */; };
+		F5B85F2C2728764C00EDC245 /* PureLayout in Frameworks */ = {isa = PBXBuildFile; productRef = F5B85F2B2728764C00EDC245 /* PureLayout */; };
+		F5B85F2F2728777800EDC245 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F5B85F2E2728777800EDC245 /* Lottie */; };
+		F5B85F322728779400EDC245 /* input_name.json in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F312728779400EDC245 /* input_name.json */; };
+		F5B85F34272877B900EDC245 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F33272877B900EDC245 /* search.json */; };
 		F5C0B32F27246E8A008885EB /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F506C2D9272848620070348B /* StackableOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackableOperations.swift; sourceTree = "<group>"; };
 		F50BF9962714B37600D399BD /* KTTC Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KTTC Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50BF9992714B37600D399BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50BF99B2714B37600D399BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F50BF99D2714B37600D399BD /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		F50BF99D2714B37600D399BD /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatisticsViewController.swift; path = "KTTC Lite/UI/ViewControllers/StatisticsViewController.swift"; sourceTree = SOURCE_ROOT; };
 		F50BF9A02714B37600D399BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50BF9A22714B37700D399BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50BF9A52714B37700D399BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +124,27 @@
 		F577EBBC271F0C8A00BDF811 /* ParameterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterCell.swift; sourceTree = "<group>"; };
 		F577EBBD271F0C8A00BDF811 /* ParameterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParameterCell.xib; sourceTree = "<group>"; };
 		F577EBC1271F19E800BDF811 /* UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKit.swift; sourceTree = "<group>"; };
+		F5A34F6B272813FD003A13DB /* SearchInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInterfaces.swift; sourceTree = "<group>"; };
+		F5A34F6C272813FD003A13DB /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		F5A34F6E272813FD003A13DB /* SearchFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFormatter.swift; sourceTree = "<group>"; };
+		F5A34F6F272813FD003A13DB /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		F5A34F70272813FD003A13DB /* SearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
+		F5A34F7827281475003A13DB /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		F5A34F7927281475003A13DB /* FormatterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterInterface.swift; sourceTree = "<group>"; };
+		F5A34F7A27281475003A13DB /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		F5A34F7B27281475003A13DB /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		F5A34F7C27281475003A13DB /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		F5A34F7D27281475003A13DB /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		F5A34F84272815EB003A13DB /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
+		F5A34F8727281EA5003A13DB /* StatisticsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsInterfaces.swift; sourceTree = "<group>"; };
+		F5A34F8827281EA5003A13DB /* StatisticsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsPresenter.swift; sourceTree = "<group>"; };
+		F5A34F8A27281EA5003A13DB /* StatisticsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsFormatter.swift; sourceTree = "<group>"; };
+		F5A34F8B27281EA5003A13DB /* StatisticsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsInteractor.swift; sourceTree = "<group>"; };
+		F5A34F8C27281EA5003A13DB /* StatisticsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsWireframe.swift; sourceTree = "<group>"; };
+		F5A34F93272826A3003A13DB /* BlitzTanksList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BlitzTanksList.json; sourceTree = "<group>"; };
+		F5A34F94272826D4003A13DB /* TanksList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TanksList.json; sourceTree = "<group>"; };
+		F5B85F312728779400EDC245 /* input_name.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = input_name.json; sourceTree = "<group>"; };
+		F5B85F33272877B900EDC245 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +153,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B85F2C2728764C00EDC245 /* PureLayout in Frameworks */,
+				F5A34F6927271D4B003A13DB /* SPAlert in Frameworks */,
 				F513F2CD2714BED8005CBB92 /* ObjectMapper in Frameworks */,
+				F5B85F2F2728777800EDC245 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +216,8 @@
 				F5C0B3312725A61B008885EB /* Delegates */,
 				F50BF9B02714B45200D399BD /* Models */,
 				F5C0B3302725A601008885EB /* Packages */,
+				F5A34F7727281475003A13DB /* VIPER */,
+				F5A34F972728482E003A13DB /* Utils */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -222,8 +274,8 @@
 		F5221527271ECD1E000398FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F5221528271ECD39000398FA /* SearchViewController.swift */,
-				F50BF99D2714B37600D399BD /* StatisticsViewController.swift */,
+				F5A34F8627281E96003A13DB /* Statistics */,
+				F5A34F6A272813E7003A13DB /* Search */,
 				F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */,
 			);
 			path = ViewControllers;
@@ -232,6 +284,7 @@
 		F577EBBA271F0C6500BDF811 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F5B85F302728777D00EDC245 /* Animations */,
 				F5C0B3342725A6D3008885EB /* Assets */,
 				F577EBBB271F0C6B00BDF811 /* Cells */,
 				F5C0B3322725A6B7008885EB /* Nibs */,
@@ -254,8 +307,65 @@
 			isa = PBXGroup;
 			children = (
 				F577EBC1271F19E800BDF811 /* UIKit.swift */,
+				F5A34F84272815EB003A13DB /* Foundation.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F5A34F6A272813E7003A13DB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F5A34F6B272813FD003A13DB /* SearchInterfaces.swift */,
+				F5A34F6C272813FD003A13DB /* SearchPresenter.swift */,
+				F5221528271ECD39000398FA /* SearchViewController.swift */,
+				F5A34F6E272813FD003A13DB /* SearchFormatter.swift */,
+				F5A34F6F272813FD003A13DB /* SearchInteractor.swift */,
+				F5A34F70272813FD003A13DB /* SearchWireframe.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F5A34F7727281475003A13DB /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				F5A34F7827281475003A13DB /* BaseWireframe.swift */,
+				F5A34F7927281475003A13DB /* FormatterInterface.swift */,
+				F5A34F7A27281475003A13DB /* UIStoryboardExtension.swift */,
+				F5A34F7B27281475003A13DB /* PresenterInterface.swift */,
+				F5A34F7C27281475003A13DB /* ViewInterface.swift */,
+				F5A34F7D27281475003A13DB /* InteractorInterface.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		F5A34F8627281E96003A13DB /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				F5A34F8727281EA5003A13DB /* StatisticsInterfaces.swift */,
+				F5A34F8827281EA5003A13DB /* StatisticsPresenter.swift */,
+				F50BF99D2714B37600D399BD /* StatisticsViewController.swift */,
+				F5A34F8A27281EA5003A13DB /* StatisticsFormatter.swift */,
+				F5A34F8B27281EA5003A13DB /* StatisticsInteractor.swift */,
+				F5A34F8C27281EA5003A13DB /* StatisticsWireframe.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		F5A34F972728482E003A13DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F506C2D9272848620070348B /* StackableOperations.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F5B85F302728777D00EDC245 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				F5B85F33272877B900EDC245 /* search.json */,
+				F5B85F312728779400EDC245 /* input_name.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		F5C0B3302725A601008885EB /* Packages */ = {
@@ -303,6 +413,8 @@
 			isa = PBXGroup;
 			children = (
 				F50BF9A72714B37700D399BD /* Info.plist */,
+				F5A34F93272826A3003A13DB /* BlitzTanksList.json */,
+				F5A34F94272826D4003A13DB /* TanksList.json */,
 			);
 			path = Configs;
 			sourceTree = "<group>";
@@ -325,6 +437,9 @@
 			name = "KTTC Lite";
 			packageProductDependencies = (
 				F513F2CC2714BED8005CBB92 /* ObjectMapper */,
+				F5A34F6827271D4B003A13DB /* SPAlert */,
+				F5B85F2B2728764C00EDC245 /* PureLayout */,
+				F5B85F2E2728777800EDC245 /* Lottie */,
 			);
 			productName = "WoT Manager";
 			productReference = F50BF9962714B37600D399BD /* KTTC Lite.app */;
@@ -357,6 +472,9 @@
 			mainGroup = F50BF98D2714B37600D399BD;
 			packageReferences = (
 				F513F2CB2714BED8005CBB92 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				F5A34F6727271D4B003A13DB /* XCRemoteSwiftPackageReference "SPAlert" */,
+				F5B85F2A2728764C00EDC245 /* XCRemoteSwiftPackageReference "PureLayout" */,
+				F5B85F2D2728777800EDC245 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = F50BF9972714B37600D399BD /* Products */;
 			projectDirPath = "";
@@ -372,6 +490,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A34F95272829AF003A13DB /* BlitzTanksList.json in Resources */,
+				F5B85F322728779400EDC245 /* input_name.json in Resources */,
+				F5B85F34272877B900EDC245 /* search.json in Resources */,
+				F5A34F96272829AF003A13DB /* TanksList.json in Resources */,
 				F50BF9A62714B37700D399BD /* LaunchScreen.storyboard in Resources */,
 				F50BF9A32714B37700D399BD /* Assets.xcassets in Resources */,
 				F50BF9A12714B37600D399BD /* Main.storyboard in Resources */,
@@ -388,7 +510,9 @@
 			files = (
 				F5130819271837AD0032797D /* ThreadPool.swift in Sources */,
 				F513082E271837AD0032797D /* Signal.swift in Sources */,
+				F5A34F74272813FD003A13DB /* SearchFormatter.swift in Sources */,
 				F513082C271837AD0032797D /* ValuePipe.swift in Sources */,
+				F5A34F76272813FD003A13DB /* SearchWireframe.swift in Sources */,
 				F513081F271837AD0032797D /* Lock.swift in Sources */,
 				F513082F271837AD0032797D /* Signal_Combine.swift in Sources */,
 				F5130829271837AD0032797D /* Promise.swift in Sources */,
@@ -402,28 +526,44 @@
 				F5130823271837AD0032797D /* Disposable.swift in Sources */,
 				F5130826271837AD0032797D /* Signal_Single.swift in Sources */,
 				F522152A271ECD39000398FA /* SearchViewController.swift in Sources */,
+				F5A34F85272815EB003A13DB /* Foundation.swift in Sources */,
 				F5130820271837AD0032797D /* Timer.swift in Sources */,
+				F5A34F9027281EA5003A13DB /* StatisticsFormatter.swift in Sources */,
 				F5130822271837AD0032797D /* QueueLocalObject.swift in Sources */,
 				F5221526271E21D7000398FA /* TankInfo.swift in Sources */,
 				F5130821271837AD0032797D /* Signal_Dispatch.swift in Sources */,
 				F50BF99A2714B37600D399BD /* AppDelegate.swift in Sources */,
 				F5130830271837AD0032797D /* Signal_Timing.swift in Sources */,
+				F5A34F72272813FD003A13DB /* SearchPresenter.swift in Sources */,
+				F5A34F8227281475003A13DB /* ViewInterface.swift in Sources */,
 				F50BF9AF2714B3C600D399BD /* Main.swift in Sources */,
 				F513082A271837AD0032797D /* Queue.swift in Sources */,
+				F5A34F8027281475003A13DB /* UIStoryboardExtension.swift in Sources */,
 				F513081E271837AD0032797D /* Signal_Mapping.swift in Sources */,
 				F513082B271837AD0032797D /* Atomic.swift in Sources */,
 				F513081D271837AD0032797D /* Signal_Merge.swift in Sources */,
 				F5130825271837AD0032797D /* Bag.swift in Sources */,
+				F5A34F9127281EA5003A13DB /* StatisticsInteractor.swift in Sources */,
 				F513F2CF2714BF40005CBB92 /* UserInfo.swift in Sources */,
 				F50BF99C2714B37600D399BD /* SceneDelegate.swift in Sources */,
+				F5A34F8327281475003A13DB /* InteractorInterface.swift in Sources */,
+				F5A34F7F27281475003A13DB /* FormatterInterface.swift in Sources */,
 				F577EBC2271F19E800BDF811 /* UIKit.swift in Sources */,
 				F5130827271837AD0032797D /* Signal_Take.swift in Sources */,
+				F5A34F7E27281475003A13DB /* BaseWireframe.swift in Sources */,
 				F5C0B32F27246E8A008885EB /* SelectGameViewController.swift in Sources */,
+				F5A34F8D27281EA5003A13DB /* StatisticsInterfaces.swift in Sources */,
 				F577EBBE271F0C8A00BDF811 /* ParameterCell.swift in Sources */,
+				F5A34F71272813FD003A13DB /* SearchInterfaces.swift in Sources */,
+				F5A34F75272813FD003A13DB /* SearchInteractor.swift in Sources */,
+				F5A34F9227281EA5003A13DB /* StatisticsWireframe.swift in Sources */,
 				F5130831271837AD0032797D /* Signal_Meta.swift in Sources */,
+				F506C2DA272848620070348B /* StackableOperations.swift in Sources */,
+				F5A34F8127281475003A13DB /* PresenterInterface.swift in Sources */,
 				F5130818271837AD0032797D /* Subscriber.swift in Sources */,
 				F513082D271837AD0032797D /* Signal_Loop.swift in Sources */,
 				F513081C271837AD0032797D /* Signal_Reduce.swift in Sources */,
+				F5A34F8E27281EA5003A13DB /* StatisticsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +643,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -559,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -572,11 +712,11 @@
 		F50BF9AB2714B37700D399BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = _AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = V5YRQJ5ATM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KTTC Lite/Configs/Info.plist";
@@ -603,11 +743,11 @@
 		F50BF9AC2714B37700D399BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = _AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = V5YRQJ5ATM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KTTC Lite/Configs/Info.plist";
@@ -663,6 +803,30 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		F5A34F6727271D4B003A13DB /* XCRemoteSwiftPackageReference "SPAlert" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPAlert";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		F5B85F2A2728764C00EDC245 /* XCRemoteSwiftPackageReference "PureLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PureLayout/PureLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		F5B85F2D2728777800EDC245 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -670,6 +834,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F513F2CB2714BED8005CBB92 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
 			productName = ObjectMapper;
+		};
+		F5A34F6827271D4B003A13DB /* SPAlert */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5A34F6727271D4B003A13DB /* XCRemoteSwiftPackageReference "SPAlert" */;
+			productName = SPAlert;
+		};
+		F5B85F2B2728764C00EDC245 /* PureLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5B85F2A2728764C00EDC245 /* XCRemoteSwiftPackageReference "PureLayout" */;
+			productName = PureLayout;
+		};
+		F5B85F2E2728777800EDC245 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5B85F2D2728777800EDC245 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

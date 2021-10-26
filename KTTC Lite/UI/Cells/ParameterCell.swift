@@ -12,7 +12,12 @@ class ParameterCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        drawBorder(0, width: 0.5, color: .systemBorder)
+        drawBorder(0, width: 0.4, color: .systemBorder)
         parameterLabel.textColor = .label
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        drawBorder(0, width: 0.4, color: .systemBorder)
     }
 }

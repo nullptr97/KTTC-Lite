@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iBC-kD-DAB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -29,26 +30,27 @@
         <!--Select Game View Controller-->
         <scene sceneID="UUh-lD-ox0">
             <objects>
-                <viewController id="to3-Rq-bKg" customClass="SelectGameViewController" customModule="WoT_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="to3-Rq-bKg" customClass="SelectGameViewController" customModule="KTTC_Lite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jiY-SC-5Gw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-WC-j5C">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-WC-j5C">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vay-iw-0u5">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wot" translatesAutoresizingMaskIntoConstraints="NO" id="JUZ-oi-0GN">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JUZ-oi-0GN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLh-p5-n5h">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="450"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="452"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="  "/>
                                                 <connections>
                                                     <action selector="didSelectWot:" destination="to3-Rq-bKg" eventType="touchUpInside" id="NCM-Dn-dc1"/>
+                                                    <action selector="willSelectWot:" destination="to3-Rq-bKg" eventType="touchDown" id="gDk-y0-U3h"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -65,17 +67,18 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mgm-sr-hn6">
-                                        <rect key="frame" x="0.0" y="450" width="414" height="446"/>
+                                        <rect key="frame" x="0.0" y="448" width="414" height="448"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wotb" translatesAutoresizingMaskIntoConstraints="NO" id="mu9-Jx-gtm">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="446"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mu9-Jx-gtm">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-Lh-zKJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="446"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="   "/>
                                                 <connections>
                                                     <action selector="didSelectWotBlitz:" destination="to3-Rq-bKg" eventType="touchUpInside" id="waU-Jg-Eqt"/>
+                                                    <action selector="willSelectWotBlitz:" destination="to3-Rq-bKg" eventType="touchDown" id="wHp-Jx-Ptu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -97,13 +100,20 @@
                         <viewLayoutGuide key="safeArea" id="azf-Mg-85f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mwd-WC-j5C" firstAttribute="leading" secondItem="azf-Mg-85f" secondAttribute="leading" id="BAe-w5-JW5"/>
+                            <constraint firstItem="mwd-WC-j5C" firstAttribute="leading" secondItem="jiY-SC-5Gw" secondAttribute="leading" id="BAe-w5-JW5"/>
                             <constraint firstAttribute="bottom" secondItem="mwd-WC-j5C" secondAttribute="bottom" id="H4K-Z9-cXe"/>
-                            <constraint firstItem="azf-Mg-85f" firstAttribute="trailing" secondItem="mwd-WC-j5C" secondAttribute="trailing" id="fPm-4w-z0B"/>
+                            <constraint firstAttribute="trailing" secondItem="mwd-WC-j5C" secondAttribute="trailing" id="fPm-4w-z0B"/>
                             <constraint firstItem="mwd-WC-j5C" firstAttribute="top" secondItem="jiY-SC-5Gw" secondAttribute="top" id="vXw-Kb-JbO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VIQ-Hd-zn9"/>
+                    <connections>
+                        <outlet property="blitzButton" destination="P9i-Lh-zKJ" id="Q2a-By-76v"/>
+                        <outlet property="blitzImageView" destination="mu9-Jx-gtm" id="76f-0n-omI"/>
+                        <outlet property="gamesStackView" destination="mwd-WC-j5C" id="We2-hL-5TT"/>
+                        <outlet property="wotButton" destination="vLh-p5-n5h" id="btn-PT-635"/>
+                        <outlet property="wotImageView" destination="JUZ-oi-0GN" id="onL-Hn-fKF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5K-2n-tXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,8 +152,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="wot" width="672" height="378"/>
-        <image name="wotb" width="616" height="353"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -7,13 +7,13 @@
 
 import UIKit
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+protocol Expectable {
+    func getExpectedValues()
+}
 
-
-
+@main class AppDelegate: UIResponder, UIApplicationDelegate, Expectable {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        getExpectedValues()
         return true
     }
 
@@ -31,6 +31,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    internal func getExpectedValues() {
+        let api = KTTCApi()
+        api.requestXVM(with: Info.self).start { expectedValues in
+            guard let expectedValues = expectedValues.data else { return }
+            Constants.expectedValues = expectedValues
+        } error: { error in
+            print("Expected values not updated: \(error)")
+        } completed: {
+            print("Expected values updated")
+        }
+    }
 }
 
