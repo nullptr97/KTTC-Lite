@@ -3,16 +3,11 @@
 Приложение для танкистов, следящих за своей статистикой!
 
 <br>
+<img height= "400" src="https://github.com/nullpointer97/KTTC-Lite/raw/main/KTTC%20Lite/UI/Images/Shp0Oj-TWig.jpeg" />
 <img height= "400" src="https://github.com/nullpointer97/KTTC-Lite/raw/main/KTTC%20Lite/UI/Images/fVPzs3eGsXc.jpeg" />
+<img height= "400" src="https://github.com/nullpointer97/KTTC-Lite/raw/main/KTTC%20Lite/UI/Images/n01cWWAODlY.jpeg" />
+<img height= "400" src="https://github.com/nullpointer97/KTTC-Lite/raw/main/KTTC%20Lite/UI/Images/XRilbUj-qrU.jpeg" />
 <br>
-
-![Screenshot](https://github.com/nullpointer97/KTTC-Lite/raw/main/KTTC%20Lite/UI/Images/Shp0Oj-TWig.jpeg)
-
-![Screenshot](https://github.com/nullpointer97/KTTC-Lite/raw/main/KTTC%20Lite/UI/Images/fVPzs3eGsXc.jpeg)
-
-![Screenshot](https://github.com/nullpointer97/KTTC-Lite/raw/main/KTTC%20Lite/UI/Images/n01cWWAODlY.jpeg)
-
-![Screenshot](https://github.com/nullpointer97/KTTC-Lite/raw/main/KTTC%20Lite/UI/Images/XRilbUj-qrU.jpeg)
 
 ## Функционал
 
