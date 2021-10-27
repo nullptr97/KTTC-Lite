@@ -72,12 +72,12 @@
 		F5B85F2C2728764C00EDC245 /* PureLayout in Frameworks */ = {isa = PBXBuildFile; productRef = F5B85F2B2728764C00EDC245 /* PureLayout */; };
 		F5B85F2F2728777800EDC245 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F5B85F2E2728777800EDC245 /* Lottie */; };
 		F5B85F322728779400EDC245 /* input_name.json in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F312728779400EDC245 /* input_name.json */; };
-		F5B85F34272877B900EDC245 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F33272877B900EDC245 /* search.json */; };
 		F5B85F3627287BF000EDC245 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B85F3527287BF000EDC245 /* StatisticsViewController.swift */; };
 		F5B85F3C27287EBD00EDC245 /* n01cWWAODlY.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F3827287EBD00EDC245 /* n01cWWAODlY.jpeg */; };
 		F5B85F3D27287EBD00EDC245 /* XRilbUj-qrU.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F3927287EBD00EDC245 /* XRilbUj-qrU.jpeg */; };
 		F5B85F3E27287EBD00EDC245 /* fVPzs3eGsXc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F3A27287EBD00EDC245 /* fVPzs3eGsXc.jpeg */; };
 		F5B85F3F27287EBD00EDC245 /* Shp0Oj-TWig.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F3B27287EBD00EDC245 /* Shp0Oj-TWig.jpeg */; };
+		F5B85F442729936900EDC245 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = F5B85F432729936900EDC245 /* search.json */; };
 		F5C0B32F27246E8A008885EB /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -147,12 +147,12 @@
 		F5A34F93272826A3003A13DB /* BlitzTanksList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BlitzTanksList.json; sourceTree = "<group>"; };
 		F5A34F94272826D4003A13DB /* TanksList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TanksList.json; sourceTree = "<group>"; };
 		F5B85F312728779400EDC245 /* input_name.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = input_name.json; sourceTree = "<group>"; };
-		F5B85F33272877B900EDC245 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		F5B85F3527287BF000EDC245 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		F5B85F3827287EBD00EDC245 /* n01cWWAODlY.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = n01cWWAODlY.jpeg; sourceTree = "<group>"; };
 		F5B85F3927287EBD00EDC245 /* XRilbUj-qrU.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "XRilbUj-qrU.jpeg"; sourceTree = "<group>"; };
 		F5B85F3A27287EBD00EDC245 /* fVPzs3eGsXc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fVPzs3eGsXc.jpeg; sourceTree = "<group>"; };
 		F5B85F3B27287EBD00EDC245 /* Shp0Oj-TWig.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Shp0Oj-TWig.jpeg"; sourceTree = "<group>"; };
+		F5B85F432729936900EDC245 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 		F5C0B32E27246E8A008885EB /* SelectGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -371,7 +371,7 @@
 		F5B85F302728777D00EDC245 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				F5B85F33272877B900EDC245 /* search.json */,
+				F5B85F432729936900EDC245 /* search.json */,
 				F5B85F312728779400EDC245 /* input_name.json */,
 			);
 			path = Animations;
@@ -515,11 +515,11 @@
 				F5B85F3D27287EBD00EDC245 /* XRilbUj-qrU.jpeg in Resources */,
 				F5B85F322728779400EDC245 /* input_name.json in Resources */,
 				F5B85F3C27287EBD00EDC245 /* n01cWWAODlY.jpeg in Resources */,
-				F5B85F34272877B900EDC245 /* search.json in Resources */,
 				F5B85F3E27287EBD00EDC245 /* fVPzs3eGsXc.jpeg in Resources */,
 				F5A34F96272829AF003A13DB /* TanksList.json in Resources */,
 				F50BF9A62714B37700D399BD /* LaunchScreen.storyboard in Resources */,
 				F50BF9A32714B37700D399BD /* Assets.xcassets in Resources */,
+				F5B85F442729936900EDC245 /* search.json in Resources */,
 				F50BF9A12714B37600D399BD /* Main.storyboard in Resources */,
 				F577EBBF271F0C8A00BDF811 /* ParameterCell.xib in Resources */,
 			);
@@ -740,7 +740,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = V5YRQJ5ATM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KTTC Lite/Configs/Info.plist";
@@ -771,7 +771,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = V5YRQJ5ATM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "KTTC Lite/Configs/Info.plist";

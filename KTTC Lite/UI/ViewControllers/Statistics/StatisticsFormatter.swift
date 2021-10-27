@@ -17,6 +17,7 @@ struct NeedCalculateData {
     var wn7: WN7 = 0
     var wn8: WN8 = 0
     var eff: EFF = 0
+    var xwn8: WN8 = 0
     
     var xp: Double = 0
     var damage: Double = 0
@@ -95,6 +96,7 @@ struct DataValue: Hashable {
 }
 
 enum Section {
+    case warning
     case ratings
     case firstDivider
     case winrate
@@ -109,36 +111,22 @@ enum Section {
 }
 
 enum Item: Hashable {
-    static func == (lhs: Item, rhs: Item) -> Bool {
-        switch lhs {
-        case .key(let string1):
-            switch rhs {
-            case .key(let string):
-                return string1 == string
-            default:
-                return false
-            }
-        case .value(let dictionary1):
-            switch rhs {
-            case .value(let dictionary):
-                return dictionary1 == dictionary
-            default:
-                return false
-            }
-        case .level(let dictionary2):
-            switch rhs {
-            case .level(let dictionary):
-                return dictionary2 == dictionary
-            default:
-                return false
-            }
+    case description(String)
+    case value((String, Double))
+    
+    func hash(into hasher: inout Hasher) {
+        switch self {
+        case .description(let d):
+            hasher.combine(d)
+        case .value((let k, let v)):
+            hasher.combine(k)
+            hasher.combine(v)
         }
     }
-    
-    case key(String)
-    case value([String: Double])
-    
-    case level([String: String])
+
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
 }
 
 typealias DataSource = UICollectionViewDiffableDataSource<Section, Item>
@@ -166,14 +154,23 @@ extension StatisticsFormatter: StatisticsFormatterInterface {
             let section = self.presenter?.view.snapshot.sectionIdentifiers[indexPath.section]
             
             switch object {
-            case .level(let dictionary):
-                if let key = dictionary.keys.first, indexPath.section > 7 {
+            case .description(let d):
+                switch section {
+                case .warning:
                     cell.backgroundColor = .systemBackground
+                    cell.parameterLabel.textColor = .secondaryLabel
+                    cell.parameterLabel.numberOfLines = 2
                     cell.parameterLabel.textAlignment = .center
-                    cell.parameterLabel.text = key
-                    cell.parameterLabel.font = .systemFont(ofSize: 13, weight: .bold)
+                    cell.parameterLabel.text = d
+                    cell.parameterLabel.font = .systemFont(ofSize: 11, weight: .light)
+                case .bad, .good, .average:
+                    cell.backgroundColor = .systemBackground
+                    cell.parameterLabel.numberOfLines = 1
+                    cell.parameterLabel.textAlignment = .center
+                    cell.parameterLabel.text = d
+                    cell.parameterLabel.font = .systemFont(ofSize: 12, weight: .bold)
 
-                    switch key {
+                    switch d {
                     case "Уникум":
                         cell.parameterLabel.textColor = .color(from: 0xb14cc2)
                     case "Великолепный игрок":
@@ -189,59 +186,64 @@ extension StatisticsFormatter: StatisticsFormatterInterface {
                     default:
                         cell.parameterLabel.textColor = .label
                     }
+                default:
+                    cell.backgroundColor = .systemBackground
+                    cell.parameterLabel.numberOfLines = 1
+                    cell.parameterLabel.textAlignment = .natural
+                    cell.parameterLabel.text = d
+                    cell.parameterLabel.font = .systemFont(ofSize: 13, weight: .medium)
+                    cell.parameterLabel.textColor = .label
                 }
-            case .key(let key):
+            case .value((let key, let value)):
+                let value = value.checkToNaN()
+                
                 cell.parameterLabel.textAlignment = .natural
-                cell.parameterLabel.text = key
-                cell.parameterLabel.textColor = .label
-                cell.parameterLabel.font = .systemFont(ofSize: 14, weight: .medium)
-            case .value(let dictionary):
-                cell.parameterLabel.textAlignment = .natural
-                cell.parameterLabel.text = "\((dictionary[dictionary.keys.first ?? ""] ?? 0))"
-                cell.parameterLabel.font = .systemFont(ofSize: 14, weight: .medium)
-
-                if let key = dictionary.keys.first {
-                    let value = dictionary[key]?.checkToNaN()
-                    
-                    if indexPath.item % 2 != 0 && indexPath.section < 8 {
-                        switch key {
-                        case "avgDamage":
-                            cell.parameterLabel.textColor = .xwmColor(from: .damage, with: Int(value ?? 0))
-                        case "wn6":
-                            cell.parameterLabel.textColor = .xwmColor(from: .wn6, with: Int(value ?? 0))
-                            cell.parameterLabel.text = "\((dictionary[dictionary.keys.first ?? ""] ?? 0).round(to: 2))"
-                        case "wn7":
-                            cell.parameterLabel.textColor = .xwmColor(from: .wn7, with: Int(value ?? 0))
-                            cell.parameterLabel.text = "\((dictionary[dictionary.keys.first ?? ""] ?? 0).round(to: 2))"
-                        case "wn8":
-                            cell.parameterLabel.textColor = .xwmColor(from: .wn8, with: Int(value ?? 0))
-                            cell.parameterLabel.text = "\((dictionary[dictionary.keys.first ?? ""] ?? 0).round(to: 2))"
-                            self.presenter?.view.setXVMTitle(withColor: .xwmColor(from: .wn8, with: Int(value ?? 0)))
-                        case "winrate":
-                            cell.parameterLabel.textColor = .xwmColor(from: .winrate, with: Int(value ?? 0))
-                            cell.parameterLabel.text = "\(dictionary[dictionary.keys.first ?? ""] ?? 0)%"
-                        case "battles":
-                            cell.parameterLabel.textColor = .label
-                            cell.parameterLabel.text = "\(Int(dictionary[dictionary.keys.first ?? ""] ?? 0))"
-                        case "maxFrags":
-                            cell.parameterLabel.textColor = .xwmColor(from: .frags, with: Int(value ?? 0))
-                            cell.parameterLabel.text = "\(Int(dictionary[dictionary.keys.first ?? ""] ?? 0))"
-                        case "eff":
-                            cell.parameterLabel.textColor = .xwmColor(from: .eff, with: Int(value ?? 0))
-                            cell.parameterLabel.text = "\((dictionary[dictionary.keys.first ?? ""] ?? 0).round(to: 2))"
-                        case "spotted", "frags":
-                            cell.parameterLabel.textColor = .label
-                            cell.parameterLabel.text = "\(Int(dictionary[dictionary.keys.first ?? ""] ?? 0))"
-                        default:
-                            cell.parameterLabel.textColor = .label
-                        }
+                cell.parameterLabel.numberOfLines = 1
+                cell.parameterLabel.text = "\(value)"
+                cell.parameterLabel.font = .systemFont(ofSize: 13, weight: .medium)
+                
+                if indexPath.item % 2 != 0 && indexPath.section < 8 {
+                    switch key {
+                    case "avgDamage":
+                        cell.parameterLabel.textColor = .xwmColor(from: .damage, with: value)
+                    case "wn6":
+                        cell.parameterLabel.textColor = .xwmColor(from: .wn6, with: value)
+                        cell.parameterLabel.text = "\(value.round(to: 2))"
+                    case "wn7":
+                        cell.parameterLabel.textColor = .xwmColor(from: .wn7, with: value)
+                        cell.parameterLabel.text = "\(value.round(to: 2))"
+                    case "wn8":
+                        cell.parameterLabel.textColor = .xwmColor(from: .wn8, with: value)
+                        cell.parameterLabel.text = "\(value.round(to: 2))"
+                    case "xwn8":
+                        cell.parameterLabel.textColor = .xwmColor(from: .xwn8, with: value)
+                        cell.parameterLabel.text = "\(value.round(to: 2))"
+                        self.presenter?.view.setXVMTitle(withColor: .xwmColor(from: .xwn8, with: value))
+                    case "winrate":
+                        cell.parameterLabel.textColor = .xwmColor(from: .winrate, with: value)
+                        cell.parameterLabel.text = "\(value)%"
+                    case "battles":
+                        cell.parameterLabel.textColor = .label
+                        cell.parameterLabel.text = "\(value.int)"
+                    case "maxFrags":
+                        cell.parameterLabel.textColor = .xwmColor(from: .frags, with: value)
+                        cell.parameterLabel.text = "\(value.int)"
+                    case "eff":
+                        cell.parameterLabel.textColor = .xwmColor(from: .eff, with: value)
+                        cell.parameterLabel.text = "\(value.round(to: 2))"
+                    case "spotted", "frags":
+                        cell.parameterLabel.textColor = .label
+                        cell.parameterLabel.text = "\(value.int)"
+                    default:
+                        cell.parameterLabel.textColor = .label
                     }
                 }
             }
-            
+
             switch section {
             case .firstDivider, .secondDivider, .thirdDivider, .fourtDivider:
                 cell.parameterLabel.textAlignment = .natural
+                cell.parameterLabel.numberOfLines = 1
                 cell.backgroundColor = .dividerColor
                 cell.parameterLabel.text = nil
             default:
@@ -266,42 +268,45 @@ extension StatisticsFormatter: StatisticsFormatterInterface {
     }
     
     private func updateDataSource() {
-        presenter?.view.snapshot.appendSections([.winrate, .firstDivider, .ratings, .secondDivider, .frags, .thirdDivider, .shoots, .fourtDivider, .good, .average, .bad])
+        presenter?.view.snapshot.appendSections([.warning, .winrate, .firstDivider, .ratings, .secondDivider, .frags, .thirdDivider, .shoots, .fourtDivider, .good, .average, .bad])
         presenter?.view.dataSource.apply(presenter?.view.snapshot ?? makeSnapshot())
         
-        presenter?.view.snapshot.appendItems([.key("Количество боёв:"), .value(["battles": needCalculateData.battles])], toSection: .winrate)
-        presenter?.view.snapshot.appendItems([.key("Процент побед:"), .value(["winrate": needCalculateData.winrate])], toSection: .winrate)
-        presenter?.view.snapshot.appendItems([.key("Средний уровень:"), .value(["averageLevel": needCalculateData.averageLevel.round(to: 1)])], toSection: .winrate)
+        presenter?.view.snapshot.appendItems([.description("Обновление статистики на сервере занимает некотoрое время")], toSection: .warning)
         
-        presenter?.view.snapshot.appendItems([.value(["d1": 0])], toSection: .firstDivider)
+        presenter?.view.snapshot.appendItems([.description("Количество боёв"), .value(("battles", needCalculateData.battles))], toSection: .winrate)
+        presenter?.view.snapshot.appendItems([.description("Процент побед"), .value(("winrate", needCalculateData.winrate))], toSection: .winrate)
+        presenter?.view.snapshot.appendItems([.description("Средний уровень"), .value(("averageLevel", needCalculateData.averageLevel.round(to: 1)))], toSection: .winrate)
         
-        presenter?.view.snapshot.appendItems([.key("Рейтинг WN6:"), .value(["wn6": needCalculateData.wn6])], toSection: .ratings)
-        presenter?.view.snapshot.appendItems([.key("Рейтинг WN7:"), .value(["wn7" : needCalculateData.wn7])], toSection: .ratings)
-        presenter?.view.snapshot.appendItems([.key("Рейтинг WN8:"), .value(["wn8" : needCalculateData.wn8])], toSection: .ratings)
-        presenter?.view.snapshot.appendItems([.key("Рейтинг РЭ:"), .value(["eff": needCalculateData.eff])], toSection: .ratings)
-        
-        presenter?.view.snapshot.appendItems([.value(["d2": 0])], toSection: .secondDivider)
-        
-        presenter?.view.snapshot.appendItems([.key("Средний урон:"), .value(["avgDamage": needCalculateData.avgDamage])], toSection: .frags)
-        presenter?.view.snapshot.appendItems([.key("Максимально уничтожил:"), .value(["maxFrags": needCalculateData.maxFrags])], toSection: .frags)
+        presenter?.view.snapshot.appendItems([.value(("d1", 0))], toSection: .firstDivider)
+
+        presenter?.view.snapshot.appendItems([.description("Рейтинг WN6"), .value(("wn6", needCalculateData.wn6))], toSection: .ratings)
+        presenter?.view.snapshot.appendItems([.description("Рейтинг WN7"), .value(("wn7", needCalculateData.wn7))], toSection: .ratings)
+        presenter?.view.snapshot.appendItems([.description("Рейтинг WN8"), .value(("wn8", needCalculateData.wn8))], toSection: .ratings)
+        presenter?.view.snapshot.appendItems([.description("Рейтинг РЭ"), .value(("eff", needCalculateData.eff))], toSection: .ratings)
+        presenter?.view.snapshot.appendItems([.description("Рейтинг XVM"), .value(("xwn8", needCalculateData.xwn8))], toSection: .ratings)
+
+        presenter?.view.snapshot.appendItems([.value(("d2", 0))], toSection: .secondDivider)
+
+        presenter?.view.snapshot.appendItems([.description("Средний урон"), .value(("avgDamage", needCalculateData.avgDamage))], toSection: .frags)
+        presenter?.view.snapshot.appendItems([.description("Максимально уничтожил"), .value(("maxFrags", needCalculateData.maxFrags))], toSection: .frags)
         if !(presenter?.view.isBlitz ?? false) {
-            presenter?.view.snapshot.appendItems([.key("Ассист урон:"), .value(["assist": needCalculateData.assist])], toSection: .frags)
-            presenter?.view.snapshot.appendItems([.key("Максимальный урон:"), .value(["maxDamage": needCalculateData.maxDamage])], toSection: .frags)
-            presenter?.view.snapshot.appendItems([.key("Процент попаданий:"), .value(["hits": needCalculateData.hits])], toSection: .frags)
+            presenter?.view.snapshot.appendItems([.description("Ассист урон"), .value(("assist", needCalculateData.assist))], toSection: .frags)
+            presenter?.view.snapshot.appendItems([.description("Максимальный урон"), .value(("maxDamage", needCalculateData.maxDamage))], toSection: .frags)
+            presenter?.view.snapshot.appendItems([.description("Процент попаданий"), .value(("hits", needCalculateData.hits))], toSection: .frags)
         }
-        
-        presenter?.view.snapshot.appendItems([.value(["d3": 0])], toSection: .thirdDivider)
-        
-        presenter?.view.snapshot.appendItems([.key("Обнаружено врагов (всего):"), .value(["spotted": needCalculateData.spotted])], toSection: .shoots)
-        presenter?.view.snapshot.appendItems([.key("Обнаружено врагов (cредний):"), .value(["avgSpotted": needCalculateData.avgSpotted])], toSection: .shoots)
-        presenter?.view.snapshot.appendItems([.key("Уничтожено врагов (всего):"), .value(["frags": needCalculateData.frags])], toSection: .shoots)
-        presenter?.view.snapshot.appendItems([.key("Уничтожено врагов (cредний):"), .value(["avgFrags": needCalculateData.avgFrags])], toSection: .shoots)
-        
-        presenter?.view.snapshot.appendItems([.value(["d4": 0])], toSection: .fourtDivider)
-        
-        presenter?.view.snapshot.appendItems([.level(["Уникум": "6"]), .level(["Средний игрок": "5"])], toSection: .good)
-        presenter?.view.snapshot.appendItems([.level(["Великолепный игрок": "4"]), .level(["Игрок ниже среднего": "3"])], toSection: .average)
-        presenter?.view.snapshot.appendItems([.level(["Хороший игрок": "2"]), .level(["Плохой игрок": "1"])], toSection: .bad)
+
+        presenter?.view.snapshot.appendItems([.value(("d3", 0))], toSection: .thirdDivider)
+
+        presenter?.view.snapshot.appendItems([.description("Обнаружено врагов (всего)"), .value(("spotted", needCalculateData.spotted))], toSection: .shoots)
+        presenter?.view.snapshot.appendItems([.description("Обнаружено врагов (в cреднем)"), .value(("avgSpotted", needCalculateData.avgSpotted))], toSection: .shoots)
+        presenter?.view.snapshot.appendItems([.description("Уничтожено врагов (всего)"), .value(("frags", needCalculateData.frags))], toSection: .shoots)
+        presenter?.view.snapshot.appendItems([.description("Уничтожено врагов (в cреднем)"), .value(("avgFrags", needCalculateData.avgFrags))], toSection: .shoots)
+
+        presenter?.view.snapshot.appendItems([.value(("d4", 0))], toSection: .fourtDivider)
+
+        presenter?.view.snapshot.appendItems([.description("Уникум"), .description("Средний игрок")], toSection: .good)
+        presenter?.view.snapshot.appendItems([.description("Великолепный игрок"), .description("Игрок ниже среднего")], toSection: .average)
+        presenter?.view.snapshot.appendItems([.description("Хороший игрок"), .description("Плохой игрок")], toSection: .bad)
         
         presenter?.view.dataSource.apply(presenter?.view.snapshot ?? makeSnapshot())
     }

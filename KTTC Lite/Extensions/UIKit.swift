@@ -286,116 +286,130 @@ extension CGFloat {
 
 /// MARK: UIColor
 extension UIColor {
-    open class func xwmColor(from state: StatType, with value: Int) -> UIColor {
+    open class func xwmColor(from state: StatType, with value: Double) -> UIColor {
         switch state {
         case .wn6, .wn7:
-            if Range(0...469).contains(value) {
+            if (0...469).contains(value) {
                 return .color(from: 0xff2901)
-            } else if Range(470...859).contains(value) {
+            } else if (470...859).contains(value) {
                 return .color(from: 0xff8e00)
-            } else if Range(860...1224).contains(value) {
+            } else if (860...1224).contains(value) {
                 return .color(from: 0xffe704)
-            } else if Range(1225...1634).contains(value) {
+            } else if (1225...1634).contains(value) {
                 return .color(from: 0x59e500)
-            } else if Range(1635...1989).contains(value) {
+            } else if (1635...1989).contains(value) {
                 return .color(from: 0x06a7a7)
             } else {
                 return .color(from: 0xb14cc2)
             }
         case .wn8:
-            if Range(0...314).contains(value) {
+            if (0...314).contains(value) {
                 return .color(from: 0xff2901)
-            } else if Range(315...754).contains(value) {
+            } else if (315...754).contains(value) {
                 return .color(from: 0xff8e00)
-            } else if Range(755...1314).contains(value) {
+            } else if (755...1314).contains(value) {
                 return .color(from: 0xffe704)
-            } else if Range(1315...1964).contains(value) {
+            } else if (1315...1964).contains(value) {
                 return .color(from: 0x59e500)
-            } else if Range(1965...2524).contains(value) {
+            } else if (1965...2524).contains(value) {
+                return .color(from: 0x06a7a7)
+            } else {
+                return .color(from: 0xb14cc2)
+            }
+        case .xwn8:
+            if (0.0...16.5).contains(value) {
+                return .color(from: 0xff2901)
+            } else if (16.6...33.5).contains(value) {
+                return .color(from: 0xff8e00)
+            } else if (33.6...52.5).contains(value) {
+                return .color(from: 0xffe704)
+            } else if (52.6...75.5).contains(value) {
+                return .color(from: 0x59e500)
+            } else if (75.6...92.5).contains(value) {
                 return .color(from: 0x06a7a7)
             } else {
                 return .color(from: 0xb14cc2)
             }
         case .eff:
-            if Range(0...629).contains(value) {
+            if (0...629).contains(value) {
                 return .color(from: 0xff2901)
-            } else if Range(630...859).contains(value) {
+            } else if (630...859).contains(value) {
                 return .color(from: 0xff8e00)
-            } else if Range(860...1139).contains(value) {
+            } else if (860...1139).contains(value) {
                 return .color(from: 0xffe704)
-            } else if Range(1140...1459).contains(value) {
+            } else if (1140...1459).contains(value) {
                 return .color(from: 0x59e500)
-            } else if Range(1460...1734).contains(value) {
+            } else if (1460...1734).contains(value) {
                 return .color(from: 0x06a7a7)
             } else {
                 return .color(from: 0xb14cc2)
             }
         case .winrate:
-            if Range(0...46).contains(value) {
+            if (0...46).contains(value) {
                 return .color(from: 0xff2901)
-            } else if Range(47...48).contains(value) {
+            } else if (47...48).contains(value) {
                 return .color(from: 0xff8e00)
-            } else if Range(49...51).contains(value) {
+            } else if (49...51).contains(value) {
                 return .color(from: 0xffe704)
-            } else if Range(52...56).contains(value) {
+            } else if (52...56).contains(value) {
                 return .color(from: 0x59e500)
-            } else if Range(57...64).contains(value) {
+            } else if (57...64).contains(value) {
                 return .color(from: 0x06a7a7)
             } else {
                 return .color(from: 0xb14cc2)
             }
         case .xte:
-            if Range(0...314).contains(value) {
+            if (0...314).contains(value) {
                 return .color(from: 0xff2901)
-            } else if Range(315...754).contains(value) {
+            } else if (315...754).contains(value) {
                 return .color(from: 0xff8e00)
-            } else if Range(755...1314).contains(value) {
+            } else if (755...1314).contains(value) {
                 return .color(from: 0xffe704)
-            } else if Range(1315...1964).contains(value) {
+            } else if (1315...1964).contains(value) {
                 return .color(from: 0x59e500)
-            } else if Range(1965...2524).contains(value) {
+            } else if (1965...2524).contains(value) {
                 return .color(from: 0x06a7a7)
             } else {
                 return .color(from: 0xb14cc2)
             }
         case .battles:
-            if Range(0...1500).contains(value) {
+            if (0...1500).contains(value) {
                 return .color(from: 0xff2901)
-            } else if Range(1001...4000).contains(value) {
+            } else if (1001...4000).contains(value) {
                 return .color(from: 0xff8e00)
-            } else if Range(4001...10000).contains(value) {
+            } else if (4001...10000).contains(value) {
                 return .color(from: 0xffe704)
-            } else if Range(10001...15000).contains(value) {
+            } else if (10001...15000).contains(value) {
                 return .color(from: 0x59e500)
-            } else if Range(15001...20000).contains(value) {
+            } else if (15001...20000).contains(value) {
                 return .color(from: 0x06a7a7)
             } else {
                 return .color(from: 0xb14cc2)
             }
         case .damage:
-            if Range(0...500).contains(value) {
+            if (0...500).contains(value) {
                 return .color(from: 0xff2901)
-            } else if Range(501...750).contains(value) {
+            } else if (501...750).contains(value) {
                 return .color(from: 0xff8e00)
-            } else if Range(751...1000).contains(value) {
+            } else if (751...1000).contains(value) {
                 return .color(from: 0xffe704)
-            } else if Range(1001...1800).contains(value) {
+            } else if (1001...1800).contains(value) {
                 return .color(from: 0x59e500)
-            } else if Range(1801...2500).contains(value) {
+            } else if (1801...2500).contains(value) {
                 return .color(from: 0x06a7a7)
             } else {
                 return .color(from: 0xb14cc2)
             }
         case .frags:
-            if Range(1...2).contains(value) {
+            if (1...2).contains(value) {
                 return .color(from: 0xff2901)
-            } else if Range(2...3).contains(value) {
+            } else if (2...3).contains(value) {
                 return .color(from: 0xff8e00)
-            } else if Range(3...4).contains(value) {
+            } else if (3...4).contains(value) {
                 return .color(from: 0xffe704)
-            } else if Range(4...5).contains(value) {
+            } else if (4...5).contains(value) {
                 return .color(from: 0x59e500)
-            } else if Range(5...6).contains(value) {
+            } else if (5...6).contains(value) {
                 return .color(from: 0x06a7a7)
             } else {
                 return .color(from: 0xb14cc2)
@@ -530,7 +544,22 @@ extension UITableViewCell {
         return UINib(nibName: UITableViewCell.reuseIdentifier, bundle: nil)
     }
     
-    static var `class`: AnyClass {
+    static var `class`: UITableViewCell.Type {
+        return Self.self
+    }
+}
+
+/// MARK: UITableViewCell
+extension UICollectionViewCell {
+    static var reuseIdentifier: String {
+        return "\(self)"
+    }
+    
+    static var nib: UINib? {
+        return UINib(nibName: Self.reuseIdentifier, bundle: nil)
+    }
+    
+    static var `class`: UICollectionViewCell.Type {
         return Self.self
     }
 }
@@ -538,4 +567,11 @@ extension UITableViewCell {
 /// MARK: UIConfigurable
 public protocol UIConfigurable {
     func setUI()
+}
+
+/// MARK: UICollectionView
+extension UICollectionView {
+    open func dequeueReusableCell<T: UICollectionViewCell>(withClassIdentifier identifier: T.Type, for indexPath: IndexPath) -> T? {
+        return dequeueReusableCell(withReuseIdentifier: identifier.reuseIdentifier, for: indexPath) as? T
+    }
 }

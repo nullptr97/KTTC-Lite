@@ -17,7 +17,6 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="standardAppearance"/>
-                        <navigationBarAppearance key="compactScrollEdgeAppearance"/>
                     </navigationBar>
                     <connections>
                         <segue destination="to3-Rq-bKg" kind="relationship" relationship="rootViewController" id="kHr-nS-Yqg"/>
@@ -118,37 +117,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5K-2n-tXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-557" y="102"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="WuE-NB-hLa">
-            <objects>
-                <viewController storyboardIdentifier="start" id="BKR-pt-Y4r" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Bhb-pj-pGw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R9g-jf-O2O">
-                                <rect key="frame" x="0.0" y="52" width="414" height="802"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="wt2-Y3-pdt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="R9g-jf-O2O" firstAttribute="top" secondItem="wt2-Y3-pdt" secondAttribute="top" constant="8" id="Ftg-j2-b8n"/>
-                            <constraint firstItem="wt2-Y3-pdt" firstAttribute="bottom" secondItem="R9g-jf-O2O" secondAttribute="bottom" constant="8" id="Qje-AK-yei"/>
-                            <constraint firstItem="wt2-Y3-pdt" firstAttribute="trailing" secondItem="R9g-jf-O2O" secondAttribute="trailing" id="dpr-iX-0MW"/>
-                            <constraint firstItem="R9g-jf-O2O" firstAttribute="leading" secondItem="wt2-Y3-pdt" secondAttribute="leading" id="gqL-0l-YMJ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="5oV-UR-kG4"/>
-                    <connections>
-                        <outlet property="mainTable" destination="R9g-jf-O2O" id="v7V-jq-QG0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uam-aV-lGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="149" y="102"/>
         </scene>
     </scenes>
     <resources>

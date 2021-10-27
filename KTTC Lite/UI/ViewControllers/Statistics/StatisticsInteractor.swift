@@ -16,6 +16,7 @@ public enum StatType {
     case wn7
     case wn8
     case eff
+    case xwn8
     case winrate
     case xte
     case battles
@@ -275,6 +276,8 @@ extension StatisticsInteractor: StatisticsInteractorInterface {
             wn8 += 75 * rDefC * rFragC
             wn8 += 145 * min(1.8, rWinC)
             
+            getxWN8(wn8: wn8)
+            
             presenter?.formatter.needCalculateData.wn8 = wn8
         }
     }
@@ -290,5 +293,23 @@ extension StatisticsInteractor: StatisticsInteractorInterface {
             
             presenter?.formatter.needCalculateData.eff = eff
         }
+    }
+    
+    private func getxWN8(wn8: WN8) {
+        let XWN8: WN8
+        if wn8 > 3650 {
+            XWN8 = 100
+        } else {
+            let firstStep = -0.00000000000000000007656 * wn8 + 0.0000000000000014848
+            let secondStep = wn8 * firstStep - 0.0000000000099633
+            let threeStep = wn8 * secondStep + 0.00000002858
+            let fourStep = wn8 * threeStep - 0.00003836
+            let fiveStep = wn8 * fourStep + 0.0575
+            let sixStep = wn8 * fiveStep - 0.99
+            let min = min(sixStep, 100)
+            XWN8 = max(min, 0)
+        }
+        
+        presenter?.formatter.needCalculateData.xwn8 = XWN8
     }
 }

@@ -40,6 +40,7 @@ final class SearchViewController: BaseController, UIConfigurable {
         mainTable.delegate = self
         mainTable.register(UITableViewCell.class, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
         mainTable.separatorStyle = .none
+        mainTable.keyboardDismissMode = .interactive
     }
 }
 
@@ -84,6 +85,7 @@ extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         var users = presenter.formatter.users
+        guard users.count > 0 else { return }
         let user = users[indexPath.row]
         
         switch gameType {

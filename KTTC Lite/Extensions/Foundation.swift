@@ -91,4 +91,8 @@ extension Double {
     func checkToNaN() -> Double {
         isNaN || isInfinite ? 0 : self
     }
+    
+    var int: Int {
+        Int(self)
+    }
 }
