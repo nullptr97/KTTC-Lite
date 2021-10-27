@@ -98,7 +98,6 @@ final class StatisticsViewController<T>: BaseController, UISearchResultsUpdating
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: configureLayout())
         view.addSubview(collectionView)
         collectionView.register(ParameterCell.nib, forCellWithReuseIdentifier: ParameterCell.reuseIdentifier)
-        collectionView.register(ValueCell.nib, forCellWithReuseIdentifier: ValueCell.reuseIdentifier)
         collectionView.dataSource = dataSource
         collectionView.backgroundColor = .systemBackground
         collectionView.refreshControl = updater
